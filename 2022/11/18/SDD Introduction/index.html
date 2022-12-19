@@ -11,9 +11,7 @@
   
   <title>
     
-      Hello World 
-      
-      
+      Jackson&#39;s note
     
   </title>
 
@@ -115,33 +113,57 @@
 
 <div class="post">
   <h3 class="date">
-    Dec 19, 2022
+    Nov 18, 2022
   </h3>
   <h1>
-    Hello World
+    
   </h1>
   <div class="content markdown-body">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <h1 id="SDD-Introduction"><a href="#SDD-Introduction" class="headerlink" title="SDD Introduction"></a>SDD Introduction</h1><p>Software design documents should include:</p>
+<ul>
+<li>A description of the product.</li>
+<li>The scope of the work required for the project to be completed.</li>
+<li>And a list of milestones.</li>
+</ul>
+<h3 id="A-User-Interface"><a href="#A-User-Interface" class="headerlink" title="A. User Interface"></a>A. User Interface</h3><p>The user interface component of a project is by far the most challenging section of the design document.</p>
+<p>Even if the product owner sends clear illustrations created by a graphic designer, the graphic designer almost always is not also a strong programmer. Naturally, this will lead to communication issues.</p>
+<p>So yes, do create those illustrations, but keep in mind that you’ll need to provide some additional context, which I’ll get to in a moment. The problem here is that the illustrations likely say little regarding…</p>
+<ul>
+<li>Animations</li>
+<li>Control states.</li>
+<li>What happens with a button when it needs to be unusable?</li>
+<li>How do you know if the button should be visible to the end user or not?</li>
+<li>Or how do you ideally want the end-user to navigate the application?</li>
+</ul>
+<p>And this is a key example of how software design documents, like <a target="_blank" rel="noopener" href="https://blog.tara.ai/how-to-write-software-test-cases-template/">software test cases</a>, are a valuable time saver. Prior to a developer writing any code behind the illustrations, you need to have all such questions answered.</p>
+<p>But first, you need to create those illustrations…</p>
+<h3 id="Wireframing-Tools"><a href="#Wireframing-Tools" class="headerlink" title="Wireframing Tools"></a>Wireframing Tools</h3><p>You might be asking, “Okay, but what if I don’t have a graphic designer?”</p>
+<p>Not to worry…</p>
+<p>You can create some clean illustrations using one of many different <a target="_blank" rel="noopener" href="https://www.creativebloq.com/wireframes/top-wireframing-tools-11121302">wireframing tools</a>, and put together a complete set of screen layouts. This should include any variations that the views display in different application states. Just for the record, our favorite wireframing tool is <a target="_blank" rel="noopener" href="https://www.invisionapp.com/">Invision</a>. They’re awesome </p>
+<p>And if you’re working on a dual application that needs to be compatible across different devices and screen sizes, be sure to create separate wireframes for each device.</p>
+<p>Yes, this is a pain in the _______. </p>
+<p>But weigh the cost of having to rewrite hours worth of code and constantly changing the UI, with how long it’ll take one of you to create these screen layouts.</p>
+<p>So, to avoid miscommunication that could turn a three week project into a three month project…</p>
+<p><strong>Take the time in the beginning stages to get the UI design right!</strong></p>
+<p>Don’t presume anything, and ask each other lots of questions.</p>
+<h2 id="B-Requirements-x2F-System-Overview"><a href="#B-Requirements-x2F-System-Overview" class="headerlink" title="B. Requirements &#x2F; System Overview"></a>B. Requirements &#x2F; System Overview</h2><p>In the requirements section of your application design document, you’ll provide a general description of the functionality, context and design of the project.</p>
+<p>To help your developer(s) better understand your application, you’ll answer questions such as:</p>
+<ul>
+<li>“What’s the main purpose of the application?” And,</li>
+<li>“What are the possible failure scenarios and conditions?”</li>
+</ul>
+<p>The point here is for the product owner to answer these open ended questions as well as they can, and then for the developer to ask follow up questions once they receive the answers. As a result, you will dramatically reduce the risk of miscommunication and the need to write additional code.</p>
+<h2 id="C-Milestones"><a href="#C-Milestones" class="headerlink" title="C. Milestones"></a>C. Milestones</h2><p>Setting clear milestones for your design document template is key to fully understanding the <a target="_blank" rel="noopener" href="https://blog.tara.ai/project-scope/">scope of your project</a>.</p>
+<p>Whether it’s the developer or the product owner that sets these milestones, they should be as unambiguous as possible, and agreed upon one-by-one by both parties.</p>
+<p>Milestones can be in the form of functionalities and &#x2F; or components, or possibly in the form of independent applications should the job description include a full suite of deliverables. At a minimum, milestones should provide a clear metric toward completion.</p>
 
   </div>
   
     
-      <a id="older" class="blog-nav" href="/2022/11/18/SDD%20Introduction/">OLDER&nbsp;&gt;</a>
+      <a id="older" class="blog-nav" href="/2022/11/05/Git%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F(distributed%20version%20control%20system%20)/">OLDER&nbsp;&gt;</a>
       
         
-          <a id="newer" class="blog-nav" href="/2022/12/19/first-post/">&lt;&nbsp;NEWER</a>
+          <a id="newer" class="blog-nav" href="/2022/12/19/hello-world/">&lt;&nbsp;NEWER</a>
           
             
 </div>
