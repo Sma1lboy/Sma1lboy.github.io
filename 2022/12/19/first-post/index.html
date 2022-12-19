@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2022/12 
+      first-post 
       
       
     
@@ -33,6 +33,10 @@
 
 
   
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -86,79 +90,40 @@
 
 
       <div class="main">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="Git distributed version control system">
-        <div class="time-m-d">12-19</div>
-        <div class="title">
-          <a href="/2022/12/19/Git%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F(distributed%20version%20control%20system%20)/">
-            
-              <span>Git distributed version control system</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="system">
-        <div class="time-m-d">12-19</div>
-        <div class="title">
-          <a href="/2022/12/19/system/">
-            
-              <span>system</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="first-post">
-        <div class="time-m-d">12-19</div>
-        <div class="title">
-          <a href="/2022/12/19/first-post/">
-            
-              <span>first-post</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Hello World">
-        <div class="time-m-d">12-19</div>
-        <div class="title">
-          <a href="/2022/12/19/hello-world/">
-            
-              <span>Hello World</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="">
-        <div class="time-m-d">11-18</div>
-        <div class="title">
-          <a href="/2022/11/18/SDD%20Introduction/">
-            
-              <span>untitled</span>
-            
-          </a>
-        </div>
-      </div>
+<div class="post">
+  <h3 class="date">
+    Dec 19, 2022
+  </h3>
+  <h1>
+    first-post
+  </h1>
+  <div class="content markdown-body">
     
   </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2022/12/19/hello-world/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/2022/12/19/system/">&lt;&nbsp;NEWER</a>
+          
+            
 </div>
-
         <div class="footer">
   
     <div class="footer-more">
