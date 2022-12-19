@@ -11,7 +11,9 @@
   
   <title>
     
-      Jackson&#39;s note
+      Git distributed version control system 
+      
+      
     
   </title>
 
@@ -106,56 +108,26 @@
 
 <div class="post">
   <h3 class="date">
-    Nov 18, 2022
+    Dec 19, 2022
   </h3>
   <h1>
-    
+    Git distributed version control system
   </h1>
   <div class="content markdown-body">
-    <h1 id="SDD-Introduction"><a href="#SDD-Introduction" class="headerlink" title="SDD Introduction"></a>SDD Introduction</h1><p>Software design documents should include:</p>
-<ul>
-<li>A description of the product.</li>
-<li>The scope of the work required for the project to be completed.</li>
-<li>And a list of milestones.</li>
-</ul>
-<h3 id="A-User-Interface"><a href="#A-User-Interface" class="headerlink" title="A. User Interface"></a>A. User Interface</h3><p>The user interface component of a project is by far the most challenging section of the design document.</p>
-<p>Even if the product owner sends clear illustrations created by a graphic designer, the graphic designer almost always is not also a strong programmer. Naturally, this will lead to communication issues.</p>
-<p>So yes, do create those illustrations, but keep in mind that you’ll need to provide some additional context, which I’ll get to in a moment. The problem here is that the illustrations likely say little regarding…</p>
-<ul>
-<li>Animations</li>
-<li>Control states.</li>
-<li>What happens with a button when it needs to be unusable?</li>
-<li>How do you know if the button should be visible to the end user or not?</li>
-<li>Or how do you ideally want the end-user to navigate the application?</li>
-</ul>
-<p>And this is a key example of how software design documents, like <a target="_blank" rel="noopener" href="https://blog.tara.ai/how-to-write-software-test-cases-template/">software test cases</a>, are a valuable time saver. Prior to a developer writing any code behind the illustrations, you need to have all such questions answered.</p>
-<p>But first, you need to create those illustrations…</p>
-<h3 id="Wireframing-Tools"><a href="#Wireframing-Tools" class="headerlink" title="Wireframing Tools"></a>Wireframing Tools</h3><p>You might be asking, “Okay, but what if I don’t have a graphic designer?”</p>
-<p>Not to worry…</p>
-<p>You can create some clean illustrations using one of many different <a target="_blank" rel="noopener" href="https://www.creativebloq.com/wireframes/top-wireframing-tools-11121302">wireframing tools</a>, and put together a complete set of screen layouts. This should include any variations that the views display in different application states. Just for the record, our favorite wireframing tool is <a target="_blank" rel="noopener" href="https://www.invisionapp.com/">Invision</a>. They’re awesome </p>
-<p>And if you’re working on a dual application that needs to be compatible across different devices and screen sizes, be sure to create separate wireframes for each device.</p>
-<p>Yes, this is a pain in the _______. </p>
-<p>But weigh the cost of having to rewrite hours worth of code and constantly changing the UI, with how long it’ll take one of you to create these screen layouts.</p>
-<p>So, to avoid miscommunication that could turn a three week project into a three month project…</p>
-<p><strong>Take the time in the beginning stages to get the UI design right!</strong></p>
-<p>Don’t presume anything, and ask each other lots of questions.</p>
-<h2 id="B-Requirements-x2F-System-Overview"><a href="#B-Requirements-x2F-System-Overview" class="headerlink" title="B. Requirements &#x2F; System Overview"></a>B. Requirements &#x2F; System Overview</h2><p>In the requirements section of your application design document, you’ll provide a general description of the functionality, context and design of the project.</p>
-<p>To help your developer(s) better understand your application, you’ll answer questions such as:</p>
-<ul>
-<li>“What’s the main purpose of the application?” And,</li>
-<li>“What are the possible failure scenarios and conditions?”</li>
-</ul>
-<p>The point here is for the product owner to answer these open ended questions as well as they can, and then for the developer to ask follow up questions once they receive the answers. As a result, you will dramatically reduce the risk of miscommunication and the need to write additional code.</p>
-<h2 id="C-Milestones"><a href="#C-Milestones" class="headerlink" title="C. Milestones"></a>C. Milestones</h2><p>Setting clear milestones for your design document template is key to fully understanding the <a target="_blank" rel="noopener" href="https://blog.tara.ai/project-scope/">scope of your project</a>.</p>
-<p>Whether it’s the developer or the product owner that sets these milestones, they should be as unambiguous as possible, and agreed upon one-by-one by both parties.</p>
-<p>Milestones can be in the form of functionalities and &#x2F; or components, or possibly in the form of independent applications should the job description include a full suite of deliverables. At a minimum, milestones should provide a clear metric toward completion.</p>
-
+    <h3 id="分布式版本控制"><a href="#分布式版本控制" class="headerlink" title="分布式版本控制"></a>分布式版本控制</h3><p>它允许软件开发者可以共同参与一个软件开发项目，<strong>但是不必在相同的网络系统下工作</strong>。其作法是在每个开发者电脑中复制一份完整的代码库以及完整历史。因此在无法连接网络时，仍可以进行软件的分支及合并，可以加速大部分的作业，增加此情形可以进行的工作，而且系统的代码库可以在多家电脑上备份，不需靠单一位置的备份。而多个位置的代码库再透过其他机制来达到同步。</p>
+<h3 id="版本控制的好处"><a href="#版本控制的好处" class="headerlink" title="版本控制的好处"></a>版本控制的好处</h3><p>本质上是一种记录文件内容变化 记录文件修改历史记录, 从而让用户可以查看历史版本, 方便版本切换</p>
+<h4 id="为什么需要版本控制"><a href="#为什么需要版本控制" class="headerlink" title="为什么需要版本控制"></a>为什么需要版本控制</h4><p>不仅仅是个人开发 团队协作更需要tracking version</p>
+<h2 id="集中式版本控制-vs-分布式版本控制"><a href="#集中式版本控制-vs-分布式版本控制" class="headerlink" title="集中式版本控制 vs 分布式版本控制"></a>集中式版本控制 vs 分布式版本控制</h2><h3 id="集中式版本控制"><a href="#集中式版本控制" class="headerlink" title="集中式版本控制"></a>集中式版本控制</h3><p>CVS SVN(Subversion)</p>
+<p>拥有单一的集中管理的服务器, 保存所有文件的修订版本, 协同工作的人们都空过客户端链接这台服务器, 取出最新的文件提交更新.</p>
+<p>好处: 每个人都可以一定程度上看到其他人做了什么 便于管理员管理</p>
+<p>缺点: 中央服务器的单点故障, 如果服务器宕机, 谁都无法提交更新, 无法协同工作</p>
+<h2 id="Git运行流程Processing"><a href="#Git运行流程Processing" class="headerlink" title="Git运行流程Processing"></a>Git运行流程Processing</h2>
   </div>
   
     
+      <a id="older" class="blog-nav" href="/2022/12/18/SDD%20Introduction/">OLDER&nbsp;&gt;</a>
+      
         
-          <a id="newer" class="blog-nav" href="/2022/12/19/hello-world/">&lt;&nbsp;NEWER</a>
-          
             
 </div>
         <div class="footer">
@@ -210,7 +182,7 @@
             </a>
           </span> -->
           
-            <input type="text" class="search-input" id="search-input" placeholder="$ grep...">
+            <input type="text" class="search-input" id="search-input" placeholder="search">
           
           <span class="search-close-icon" id="search-close-icon">
             <a href="javascript: void(0)">
