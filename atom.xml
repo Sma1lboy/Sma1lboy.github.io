@@ -6,7 +6,7 @@
   <link href="http://sma1lboy.github.io/atom.xml" rel="self"/>
   
   <link href="http://sma1lboy.github.io/"/>
-  <updated>2022-12-20T00:26:58.837Z</updated>
+  <updated>2022-12-20T19:46:55.392Z</updated>
   <id>http://sma1lboy.github.io/</id>
   
   <author>
@@ -17,25 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CSE 2231 Midterm 1 review</title>
-    <link href="http://sma1lboy.github.io/2022/12/19/CSE%202231%20midterm%201%20review/"/>
-    <id>http://sma1lboy.github.io/2022/12/19/CSE%202231%20midterm%201%20review/</id>
-    <published>2022-12-19T05:28:21.000Z</published>
-    <updated>2022-12-20T00:26:58.837Z</updated>
+    <title>Algorithm&amp;Data Structure Review</title>
+    <link href="http://sma1lboy.github.io/2022/12/20/Algorithm&amp;Data%20Structure%20Review/"/>
+    <id>http://sma1lboy.github.io/2022/12/20/Algorithm&amp;Data%20Structure%20Review/</id>
+    <published>2022-12-20T18:57:21.000Z</published>
+    <updated>2022-12-20T19:46:55.392Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Mathematic-models&quot;&gt;&lt;a href=&quot;#Mathematic-models&quot; class=&quot;headerlink&quot; title=&quot;Mathematic models&quot;&gt;&lt;/a&gt;Mathematic models&lt;/h1&gt;&lt;p&gt;Each</summary>
+    <summary type="html">&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;The Algorithm Review will</summary>
         
       
     
     
     
     
-    <category term="CSE2231" scheme="http://sma1lboy.github.io/tags/CSE2231/"/>
+    <category term="algorithm note" scheme="http://sma1lboy.github.io/tags/algorithm-note/"/>
     
   </entry>
   
@@ -86,25 +86,25 @@
   </entry>
   
   <entry>
-    <title>Git distributed version control system</title>
-    <link href="http://sma1lboy.github.io/2022/12/18/git/"/>
-    <id>http://sma1lboy.github.io/2022/12/18/git/</id>
-    <published>2022-12-18T22:57:34.000Z</published>
-    <updated>2022-12-20T00:27:44.223Z</updated>
+    <title>CSE 2231 Midterm 1 review</title>
+    <link href="http://sma1lboy.github.io/2022/12/19/CSE%202231%20midterm%201%20review/"/>
+    <id>http://sma1lboy.github.io/2022/12/19/CSE%202231%20midterm%201%20review/</id>
+    <published>2022-12-19T05:28:21.000Z</published>
+    <updated>2022-12-20T00:26:58.837Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;分布式版本控制&quot;&gt;&lt;a href=&quot;#分布式版本控制&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;Mathematic-models&quot;&gt;&lt;a href=&quot;#Mathematic-models&quot; class=&quot;headerlink&quot; title=&quot;Mathematic models&quot;&gt;&lt;/a&gt;Mathematic models&lt;/h1&gt;&lt;p&gt;Each</summary>
         
       
     
     
     
     
-    <category term="note" scheme="http://sma1lboy.github.io/tags/note/"/>
+    <category term="CSE2231" scheme="http://sma1lboy.github.io/tags/CSE2231/"/>
     
   </entry>
   
@@ -124,6 +124,29 @@
 &lt;ul&gt;
 &lt;li&gt;A description of the product.&lt;/li&gt;
 &lt;li&gt;The scope of the work required for the</summary>
+        
+      
+    
+    
+    
+    
+    <category term="note" scheme="http://sma1lboy.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git distributed version control system</title>
+    <link href="http://sma1lboy.github.io/2022/12/18/git/"/>
+    <id>http://sma1lboy.github.io/2022/12/18/git/</id>
+    <published>2022-12-18T22:57:34.000Z</published>
+    <updated>2022-12-20T00:27:44.223Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;分布式版本控制&quot;&gt;&lt;a href=&quot;#分布式版本控制&quot; class=&quot;headerlink&quot;</summary>
         
       
     

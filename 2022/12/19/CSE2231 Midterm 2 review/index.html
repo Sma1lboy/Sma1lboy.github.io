@@ -27,16 +27,16 @@
 
   <!-- hexo site css -->
   
-<link rel="stylesheet" href="../../../../css/base.css">
-<link rel="stylesheet" href="../../../../css/common.css">
-<link rel="stylesheet" href="../../../../iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
 
 
   
 
   
     
-<link rel="stylesheet" href="../../../../css/post.css">
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -47,10 +47,10 @@
   <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
   <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
   
-<script src="../../../../js/fancybox.js"></script>
+<script src="/js/fancybox.js"></script>
 
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="Jackson's note" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Jackson's note" type="application/atom+xml">
 </head>
 
 
@@ -154,7 +154,7 @@
 </ul>
 <h2 id="Linked-Data-Structures"><a href="#Linked-Data-Structures" class="headerlink" title="Linked Data Structures"></a>Linked Data Structures</h2><h3 id="Singly-Linked-Lists"><a href="#Singly-Linked-Lists" class="headerlink" title="Singly-Linked Lists"></a>Singly-Linked Lists</h3><h4 id="Direct-access"><a href="#Direct-access" class="headerlink" title="Direct access"></a>Direct access</h4><p>​	Direct access means the entries of a collection (typically with a string model) may be accessed by providing an int positis means the entries of a collection (typically with a string model) may be accessed by providing an int position&#x2F;index of any entry in the collectionn&#x2F;index of any entry in the collection – A classical but unfortunate synonym is random access; nothing random about it!</p>
 <h4 id="Sequential-access"><a href="#Sequential-access" class="headerlink" title="Sequential access"></a>Sequential access</h4><p>​	means the entries of a collection (with a string model) may be accessed in increasing order of position by accessing the “next” entry in the collection</p>
-<h3 id=""><a href="#" class="headerlink" title=""></a><img src="./Assists/imgs/image-20221105181809182.png" alt="image-20221105181809182"></h3><h4 id="Dynamic-Can-Support-Fast-Sequential-Access"><a href="#Dynamic-Can-Support-Fast-Sequential-Access" class="headerlink" title="Dynamic Can Support Fast Sequential Access"></a>Dynamic Can Support Fast Sequential Access</h4><ul>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="/./Assists/imgs/image-20221105181809182.png" alt="image-20221105181809182"></h3><h4 id="Dynamic-Can-Support-Fast-Sequential-Access"><a href="#Dynamic-Can-Support-Fast-Sequential-Access" class="headerlink" title="Dynamic Can Support Fast Sequential Access"></a>Dynamic Can Support Fast Sequential Access</h4><ul>
 <li>If we want a dynamic collection, then we should give up on storing all entries of the collection in contiguous memory locations</li>
 <li>If we want fast sequential access, then we should give up on fast direct access<ul>
 <li>– Instead, for every entry in the collection, wherever it is in memory, simply keep a reference to (i.e., memory location of) the “<strong>next</strong>” entry (How Singly linked list )</li>
@@ -187,7 +187,7 @@
 <p>could have a lot of subtrees</p>
 <p>&#x2F;&#x2F;some formula in Tree class</p>
 <h2 id="BugsWorld-Intro"><a href="#BugsWorld-Intro" class="headerlink" title="BugsWorld Intro"></a>BugsWorld Intro</h2><h3 id="Abstract-Syntax-Trees"><a href="#Abstract-Syntax-Trees" class="headerlink" title="Abstract Syntax Trees"></a>Abstract Syntax Trees</h3><p>An abstract syntax tree (AST) is a tree model of an <strong>entire program</strong> or a certain “program structure” (e.g., a statement or an expression in a Java program)	</p>
-<h2 id="BL-Compiler-Structure"><a href="#BL-Compiler-Structure" class="headerlink" title="BL Compiler Structure"></a>BL Compiler Structure</h2><p><img src="./Assists/imgs/image-20221106155956275.png" alt="image-20221106155956275"></p>
+<h2 id="BL-Compiler-Structure"><a href="#BL-Compiler-Structure" class="headerlink" title="BL Compiler Structure"></a>BL Compiler Structure</h2><p><img src="/./Assists/imgs/image-20221106155956275.png" alt="image-20221106155956275"></p>
 <h2 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h2><h3 id="Statement-Kernel-Structure"><a href="#Statement-Kernel-Structure" class="headerlink" title="Statement Kernel Structure"></a>Statement Kernel Structure</h3><p>The Statement component family allows you to manipulate values that are ASTs for BL statements</p>
 <ol>
 <li><p>type StatementKernel -&gt; type StatementKernel is modeled by STATEMENT_MODEL</p>
@@ -226,7 +226,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="Context-Free-Grammars"><a href="#Context-Free-Grammars" class="headerlink" title="Context-Free Grammars"></a>Context-Free Grammars</h2><p><img src="./Assists/imgs/image-20221106165755417.png" alt="image-20221106165755417"></p>
+<h2 id="Context-Free-Grammars"><a href="#Context-Free-Grammars" class="headerlink" title="Context-Free Grammars"></a>Context-Free Grammars</h2><p><img src="/./Assists/imgs/image-20221106165755417.png" alt="image-20221106165755417"></p>
 <h3 id="Grammar-question-ask-prof"><a href="#Grammar-question-ask-prof" class="headerlink" title="Grammar *(question ask prof)"></a>Grammar *(question ask prof)</h3><p>A grammar is set of formation rules for string in language</p>
 <p>A grammar is context-free if it satisfies certain technical conditions described herein. (what’s that mean)</p>
 <h3 id="Languages"><a href="#Languages" class="headerlink" title="Languages"></a>Languages</h3><p>A language is a set of strings over some alphabet <strong>Σ</strong></p>
@@ -239,8 +239,8 @@
 
 <img src="./Assists/imgs/image-20221106173126401.png" alt="image-20221106173126401" style="zoom:50%;" />
 
-<p><img src="./Assists/imgs/image-20221106173142547.png" alt="image-20221106173142547"></p>
-<p><img src="./Assists/imgs/image-20221106173216980.png" alt="image-20221106173216980"></p>
+<p><img src="/./Assists/imgs/image-20221106173142547.png" alt="image-20221106173142547"></p>
+<p><img src="/./Assists/imgs/image-20221106173216980.png" alt="image-20221106173216980"></p>
 <h3 id="Drivations"><a href="#Drivations" class="headerlink" title="Drivations"></a>Drivations</h3><p>A derivation of a string of terminal symbols consists of a sequence of specific rewrite-rule applications that begin with the start symbol and continue until only terminal symbols remain</p>
 <ul>
 <li>The symbol ⇒ indicates a derivation step, i.e., a specific rewrite-rule application</li>
@@ -267,7 +267,7 @@
 <li>Interpret the Program directly </li>
 <li>Compile the Program into object code (“byte code”) that is executed by a virtual machine</li>
 </ul>
-<h4 id="Time-Lines-of-Execution"><a href="#Time-Lines-of-Execution" class="headerlink" title="Time Lines of Execution"></a>Time Lines of Execution</h4><p><img src="./Assists/imgs/image-20221106183407106.png" alt="image-20221106183407106"></p>
+<h4 id="Time-Lines-of-Execution"><a href="#Time-Lines-of-Execution" class="headerlink" title="Time Lines of Execution"></a>Time Lines of Execution</h4><p><img src="/./Assists/imgs/image-20221106183407106.png" alt="image-20221106183407106"></p>
 <h3 id="Code-Generation-1"><a href="#Code-Generation-1" class="headerlink" title="Code Generation"></a>Code Generation</h3><ul>
 <li>Code generation is translating a Program to a linear (non-nested) structure, i.e., to a string of low-level instructions or “byte codes” of a BL virtual machine that can do the following:<ul>
 <li>Update the state of BugsWorld </li>
@@ -314,15 +314,15 @@
 </ul>
 <h1 id="Tips-Note"><a href="#Tips-Note" class="headerlink" title="Tips Note"></a>Tips Note</h1><h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><p>Handling Statement as table with compile counter</p>
 <p>HW 30***</p>
-<p><img src="./Assists/imgs/image-20221107170530229.png" alt="image-20221107170530229"></p>
+<p><img src="/./Assists/imgs/image-20221107170530229.png" alt="image-20221107170530229"></p>
 
   </div>
   
     
-      <a id="older" class="blog-nav" href="../../18/git/">OLDER&nbsp;&gt;</a>
+      <a id="older" class="blog-nav" href="/2022/12/19/CSE%202231%20midterm%201%20review/">OLDER&nbsp;&gt;</a>
       
         
-          <a id="newer" class="blog-nav" href="../CSE2231%20Final%20Exam/">&lt;&nbsp;NEWER</a>
+          <a id="newer" class="blog-nav" href="/2022/12/19/CSE2231%20Final%20Exam/">&lt;&nbsp;NEWER</a>
           
             
 </div>
@@ -357,7 +357,7 @@
 </div>
 
 
-<script src="../../../../js/backtotop.js"></script>
+<script src="/js/backtotop.js"></script>
 
 
 

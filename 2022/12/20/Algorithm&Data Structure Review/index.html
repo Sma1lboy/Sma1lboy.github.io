@@ -11,8 +11,8 @@
   
   <title>
     
-      Tag 
-       : CSE2231
+      Algorithm&amp;Data Structure Review 
+      
       
     
   </title>
@@ -33,6 +33,10 @@
 
 
   
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -87,101 +91,53 @@
 
 
       <div class="main">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="Algorithm&Data Structure Review">
-        <div class="time-m-d">12-20</div>
-        <div class="title">
-          <a href="/2022/12/20/Algorithm&Data%20Structure%20Review/">
-            
-              <span>Algorithm&Data Structure Review</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSE 2231 final review">
-        <div class="time-m-d">12-19</div>
-        <div class="title">
-          <a href="/2022/12/19/CSE2231%20Final%20Exam/">
-            
-              <span>CSE 2231 final review</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSE 2231 Midterm 2 review">
-        <div class="time-m-d">12-19</div>
-        <div class="title">
-          <a href="/2022/12/19/CSE2231%20Midterm%202%20review/">
-            
-              <span>CSE 2231 Midterm 2 review</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSE 2231 Midterm 1 review">
-        <div class="time-m-d">12-19</div>
-        <div class="title">
-          <a href="/2022/12/19/CSE%202231%20midterm%201%20review/">
-            
-              <span>CSE 2231 Midterm 1 review</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="SDD Introduction">
-        <div class="time-m-d">12-18</div>
-        <div class="title">
-          <a href="/2022/12/18/SDD%20Introduction/">
-            
-              <span>SDD Introduction</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Git distributed version control system">
-        <div class="time-m-d">12-18</div>
-        <div class="title">
-          <a href="/2022/12/18/git/">
-            
-              <span>Git distributed version control system</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="first-post">
-        <div class="time-m-d">12-17</div>
-        <div class="title">
-          <a href="/2022/12/17/first-post/">
-            
-              <span>first-post</span>
-            
-          </a>
-        </div>
-      </div>
-    
+<div class="post">
+  <h3 class="date">
+    Dec 20, 2022
+  </h3>
+  <h1>
+    Algorithm&Data Structure Review
+  </h1>
+  <div class="content markdown-body">
+    <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>The Algorithm Review will <strong>not</strong> follow the <strong>Easy to Hard</strong>, I will start reviewing from the least familiar to the most familiar.</p>
+<h1 id="Divide-and-Conquer-Concept-ref"><a href="#Divide-and-Conquer-Concept-ref" class="headerlink" title="Divide and Conquer Concept(ref)"></a>Divide and Conquer Concept(ref)</h1><p>分治分治，即分而治之。分治，就是把一个复杂的问题分成两个或更多的相同或相似的子问题，再把子问题分成更小的子问题……直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)……直接说就是将一个难以直接解决的大问题，分割成一些规模比较小的相同的小问题，以便各个击破，分而治之。</p>
+<h3 id="使用条件"><a href="#使用条件" class="headerlink" title="使用条件"></a>使用条件</h3><ol>
+<li><p>该问题的规模缩小到一定的程度就可以容易地解决</p>
+</li>
+<li><p>该问题可以分解为若干个规模较小的相同问题。</p>
+</li>
+<li><pre><code>利用该问题分解出的子问题的解可以合并为该问题的解；
+</code></pre>
+</li>
+<li><pre><code>该问题所分解出的各个子问题是相互独立的，即子问题之间不包含公共的子子问题。(非必需）
+</code></pre>
+</li>
+</ol>
+<h1 id="Greedy"><a href="#Greedy" class="headerlink" title="Greedy"></a>Greedy</h1><h1 id="Bit-Manipulation"><a href="#Bit-Manipulation" class="headerlink" title="Bit Manipulation"></a>Bit Manipulation</h1><h1 id="Dyamic-Programming"><a href="#Dyamic-Programming" class="headerlink" title="Dyamic Programming"></a>Dyamic Programming</h1><h2 id="Kadane’s-Algorithm"><a href="#Kadane’s-Algorithm" class="headerlink" title="Kadane’s Algorithm"></a>Kadane’s Algorithm</h2><h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><h1 id="Interval"><a href="#Interval" class="headerlink" title="Interval"></a>Interval</h1><h1 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h1><h1 id="Sliding-Window"><a href="#Sliding-Window" class="headerlink" title="Sliding Window"></a>Sliding Window</h1><h1 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h1><h1 id="Linkedlist"><a href="#Linkedlist" class="headerlink" title="Linkedlist"></a>Linkedlist</h1><h1 id="Tries"><a href="#Tries" class="headerlink" title="Tries"></a>Tries</h1><h1 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h1><h1 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h1><h1 id="Heap"><a href="#Heap" class="headerlink" title="Heap"></a>Heap</h1><h1 id="Array-amp-Hashing"><a href="#Array-amp-Hashing" class="headerlink" title="Array &amp; Hashing"></a>Array &amp; Hashing</h1><h1 id="Two-Pointer"><a href="#Two-Pointer" class="headerlink" title="Two Pointer"></a>Two Pointer</h1><h1 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45986027">Divide and Conquer</a></p>
+
   </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2022/12/19/CSE2231%20Final%20Exam/">OLDER&nbsp;&gt;</a>
+      
+        
+            
 </div>
-
         <div class="footer">
   
     <div class="footer-more">
