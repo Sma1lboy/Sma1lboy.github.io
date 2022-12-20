@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="Jackson" />
+  <meta name="description" content="Jackson&#39;s personal blog" />
+  
+  
+  <title>
+    
+      CSE 2231 final review 
+      
+      
+    
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="../../../../css/base.css">
+<link rel="stylesheet" href="../../../../css/common.css">
+<link rel="stylesheet" href="../../../../iconfont/iconfont.css">
+
+
+  
+
+  
+    
+<link rel="stylesheet" href="../../../../css/post.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="../../../../js/fancybox.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="Jackson's note" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <a href="/">JACKSON</a>
+</div>
+
+
+      <p class="links">
+  
+    <a title="archives" target="" href="/archives/">
+      <i class="iconfont icon-bookmark"></i>
+    </a>
+  
+    <a title="github" target="_blank" href="https://gist.github.com/Sma1lboy">
+      <i class="iconfont icon-github"></i>
+    </a>
+  
+    <a title="email" target="" href="541898146chen@gmail.com">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+    <a title="twitter" target="" href="https://twitter.com/Sma1lboy">
+      <i class="iconfont icon-twitter"></i>
+    </a>
+  
+    <a title="wechat" target="" href="jacksonchen0825">
+      <i class="iconfont icon-wechat"></i>
+    </a>
+  
+    <a title="rss" target="_blank" href="/atom.xml">
+      <i class="iconfont icon-rss"></i>
+    </a>
+  
+</p>
+
+
+      <div class="main">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Dec 19, 2022
+  </h3>
+  <h1>
+    CSE 2231 final review
+  </h1>
+  <div class="content markdown-body">
+    <h1 id="Final-Review"><a href="#Final-Review" class="headerlink" title="Final Review"></a>Final Review</h1><h2 id="Java-Interface"><a href="#Java-Interface" class="headerlink" title="Java Interface"></a>Java Interface</h2><h3 id="Interface-may-be-used-to-define"><a href="#Interface-may-be-used-to-define" class="headerlink" title="Interface may be used to define:"></a>Interface may be used to define:</h3><ul>
+<li>instance methods</li>
+<li>static final variables<ul>
+<li>it is unusual for an interface to define variables</li>
+</ul>
+</li>
+<li>No constructors</li>
+<li>no static methods</li>
+<li>no instance variables</li>
+</ul>
+<h3 id="Core-interface-kernel"><a href="#Core-interface-kernel" class="headerlink" title="Core interface  (kernel)"></a>Core interface  (kernel)</h3><p>Its our kernel interface</p>
+<ul>
+<li>– The mathematical model for the type</li>
+<li>– Contract(s) for the constructor(s)</li>
+<li>– Contract(s) for kernel methods</li>
+<li>– Contract(s) for methods inherited from Java library interfaces that do not have their own contract specifications (if applicable; e.g., an iterator or a comparator)</li>
+<li>The enhanced interface defines contracts for all other methods for the type</li>
+</ul>
+<h3 id="Kernel-interface-design-guidelines"><a href="#Kernel-interface-design-guidelines" class="headerlink" title="Kernel interface design guidelines"></a>Kernel interface design guidelines</h3><p>Kernel methods generally should be:</p>
+<ul>
+<li>A minimal set of methods that is functionally complete, i.e., powerful enough to:<ul>
+<li>Give a variable of the type any allowable value</li>
+<li>Determine the value of a variable of the type</li>
+</ul>
+</li>
+<li>Powerful enough to allow a client to:<ul>
+<li>Implement equals and toString</li>
+<li>Check every kernel method’s precondition</li>
+</ul>
+</li>
+</ul>
+<h3 id="Enhance-interface"><a href="#Enhance-interface" class="headerlink" title="Enhance interface"></a>Enhance interface</h3><p>most powerful interface</p>
+<h3 id="Notice-there-is-Circularity"><a href="#Notice-there-is-Circularity" class="headerlink" title="Notice there is Circularity"></a>Notice there is Circularity</h3>
+
+<p>Java permit the circularity because</p>
+<ol>
+<li>Java <strong>interface</strong> define as <strong>type</strong>, i.e., the type name along with the set of its instance methods</li>
+<li>An interface type may be used in Java <strong>even if there is no implementation</strong> of it in scope</li>
+</ol>
+<p>Interfaces are a compile-time construct</p>
+<ul>
+<li>– Used by the Java compiler for type-checking with declared types: to make sure variables are used only where they make sense • <ul>
+<li>Recall the rules for declared types and object (dynamic) types <ul>
+<li>The declared type of a variable may be an interface type </li>
+<li>The object type can never be an interface type, because you may not instantiate a variable using new followed by an interface type</li>
+<li>If the declared type is an interface type, then the object type (a class) must implement the declared type (an interface</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>– Once a Java program compiles, only object types are kept at run-time <ul>
+<li>• Declared types literally “disappear” in the JVM</li>
+</ul>
+</li>
+</ul>
+<h3 id="Packages"><a href="#Packages" class="headerlink" title="Packages"></a>Packages</h3><p>Each OSU CSE component family is bundled into its own package, i.e., a grouping of interfaces and classes that the designer thinks “belong together” for logical reasons</p>
+<p> – Example: the Queue-family components are all in the package components.queue</p>
+<p>A package provides:</p>
+<ol>
+<li>– Logical structuring: packages are hierarchical, i.e., you may have packages within packages</li>
+<li>A namespace: units in different packages may have the same name without conflict • See also import statements</li>
+<li>Another level of access control between public and private</li>
+</ol>
+<h2 id="Object-class-method"><a href="#Object-class-method" class="headerlink" title="Object class method"></a>Object class method</h2><h3 id="Common-Method-from-Object"><a href="#Common-Method-from-Object" class="headerlink" title="Common Method from Object"></a>Common Method from <strong>Object</strong></h3><p>Eevery Java class implicitly extends the class Object, which defines the following methods and provides default implementations that you should override: </p>
+<ul>
+<li>boolean equals(Object obj)</li>
+<li>int hashCode() </li>
+<li>String toString()</li>
+</ul>
+<h3 id="Default-implmentation-of-equals-hashCode-and-toString"><a href="#Default-implmentation-of-equals-hashCode-and-toString" class="headerlink" title="Default implmentation of equals, hashCode ,and toString"></a>Default implmentation of equals, hashCode ,and toString</h3><ol>
+<li>equals <ol>
+<li>Default implementation of equals: “for any non-null reference values x and y, this method [i.e., x.equals(y)] returns true if and only if x and y refer to the same object (x &#x3D;&#x3D; y has the value true).”</li>
+</ol>
+</li>
+<li>hashCode<ol>
+<li>“typically implemented by converting the internal address of the object into an integer, but this implementation technique is not required by the JavaTM programming language</li>
+</ol>
+</li>
+<li>toString<ol>
+<li>Default implementation of toString: “returns a string consisting of the name of the class of which the object is an instance, the at-sign character ‘@’, and the unsigned hexadecimal representation of the hash code of the object.”</li>
+</ol>
+</li>
+</ol>
+<p>Object cannot possibly know anything about the abstract mathematical model values (i.e., the object values) of variables</p>
+<h3 id="The-Crux-of-the-Problem"><a href="#The-Crux-of-the-Problem" class="headerlink" title="The Crux of the Problem"></a>The Crux of the Problem</h3><ul>
+<li>Object cannot possibly know anything about the <strong>abstract mathematical model values</strong> (i.e., the object values) of variables<ul>
+<li>which means the equal method compare reference value , maybe its not what the developer wants to compare with.</li>
+<li>equals, hashCode, and toString should all behave in ways that depend on these abstract mathematical model values</li>
+</ul>
+</li>
+</ul>
+<h3 id="Way-Implementation-equals-hashCode-and-toString"><a href="#Way-Implementation-equals-hashCode-and-toString" class="headerlink" title="Way Implementation equals, hashCode ,and toString"></a>Way Implementation equals, hashCode ,and toString</h3><ol>
+<li><p>equals</p>
+<ol>
+<li><p>There are a couple ways to approach this, but best practice suggests a multi-step “filtering” approach that first <strong>weeds out special cases</strong></p>
+<ol>
+<li><p>If the reference values of obj and this are equal </p>
+</li>
+<li><p>: If obj is null, then its object value does not equal the object value of this.</p>
+</li>
+<li><p>If the types of obj and this are not the same, then their object values are not equal</p>
+<ol>
+<li><p>Java gives us a way to check a slightly more general interpretation of “types are not the same”, which is better for this purpose than checking whether dynamic types are the same</p>
+<p>instanceof Operator helps check the dynamic type</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Steps-to-implements-equal-method"><a href="#Steps-to-implements-equal-method" class="headerlink" title="Steps to implements equal method"></a>Steps to implements equal method</h3><p>There are a couple ways to approach this, but best practice suggests a multi-step “<strong>filtering</strong>” approach that first weeds out special cases</p>
+<ol>
+<li>Step1: if the Reference value of Object obj and this are equal, then return true</li>
+<li>Step2: if the obj is null then it’s object value is not equal to this, then return false</li>
+<li>Step3: if the type of obj and this are not same, then they are not equal<ol>
+<li>using instance of to check<ol>
+<li>how about collections? wo we have to use raw type, every type erasure will become object class type</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Type-Erasure"><a href="#Type-Erasure" class="headerlink" title="Type Erasure"></a>Type Erasure</h3><p>For generic types, the JVM keeps track of the raw type (e.g., Queue1L or Queue2) of each variable as its dynamic type, but does not keep track of any generic type parameters (e.g., for this variable T is Integer, for that variable T is String)</p>
+<p>This mechanism is called type erasure – Effectively (but not technically), the type parameter is replaced by Object</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (!(obj instanceof XYZ&lt;?&gt;))</span><br><span class="line">//This checks whether obj has a dynamic type that implements “XYZ of unknown”, which is all the JVM knows about.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//Step 1</span><br><span class="line">if (obj == this) &#123;</span><br><span class="line">return true;</span><br><span class="line">&#125;</span><br><span class="line">//Step 2</span><br><span class="line">if (obj == null) &#123;</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br><span class="line">//Step 3</span><br><span class="line">if (!(obj instanceof XYZ&lt;?&gt;)) &#123;</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br><span class="line">//Now it&#x27;s time to casting</span><br><span class="line">XYZ&lt;?&gt; x = (XYZ&lt;?&gt;) obj; //we limit ourselves to using XYZKernel methods to determine whether their mathematical model values are equal.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Two-Remaining-Problems"><a href="#Two-Remaining-Problems" class="headerlink" title="Two Remaining Problems"></a>Two Remaining Problems</h3><ol>
+<li>What if the loop doesn’t execute at all because q and this are both empty (but with different entry types)?<ol>
+<li>There is no apparent way around this in Java!</li>
+</ol>
+</li>
+<li>What happens with an “unordered” math model type, e.g., Set or Map?<ol>
+<li>– A slightly bigger mess, but it can be handled</li>
+</ol>
+</li>
+</ol>
+<h2 id="Java-Collections-Framework"><a href="#Java-Collections-Framework" class="headerlink" title="Java Collections Framework"></a>Java Collections Framework</h2><h3 id="Views-in-the-JCF"><a href="#Views-in-the-JCF" class="headerlink" title="Views in the JCF"></a>Views in the JCF</h3><p>Views for Map: </p>
+<ul>
+<li>– Keys: Set<T> keySet()</li>
+<li>– Values: Collection <T> values() </li>
+<li>– Pairs: Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</li>
+</ul>
+<h3 id="View-“Backed-By”-Collection"><a href="#View-“Backed-By”-Collection" class="headerlink" title="View “Backed By” Collection"></a>View “Backed By” Collection</h3><p>A view is <strong>backed by the underlying</strong> collection, which means that <strong>if the view is modified</strong> then the underlying (“backing”) <strong>collection is also modified</strong>, and vice versa</p>
+<h3 id="Could-remove-Cause-Trouble"><a href="#Could-remove-Cause-Trouble" class="headerlink" title="Could remove Cause Trouble?"></a>Could remove Cause Trouble?</h3><p>Could the optional remove method <strong>not be supported</strong> by the object type of m.values()?</p>
+<p>Yes! <strong>BUT</strong></p>
+<ul>
+<li>Yes! But only when the backing Map does not support remove(). Otherwise, it is supported because the informal Javadoc for the values method says: “The collection supports element removal, which removes the corresponding mapping from the map, via the Iterator.remove, Collection.remove, removeAll, retainAll and clear operations. It does not support the add or addAll operations</li>
+<li>Which means the remove method come from</li>
+</ul>
+<h2 id="Using-Iterators"><a href="#Using-Iterators" class="headerlink" title="Using Iterators"></a>Using Iterators</h2><h3 id="JCF-Iterator-Rule"><a href="#JCF-Iterator-Rule" class="headerlink" title="JCF Iterator Rule"></a>JCF Iterator Rule</h3><p>When <strong>iterating over</strong> a <strong>collection</strong> with an iterator (explicitly or implicitly with a for‐each loop), <strong>do not call any methods on the collection</strong> and <strong>do not change the value of any of the elements</strong> of the collection (or the collection itself)</p>
+<p>​	The behavior of an iterator is unspecified if the underlying collection is modified while the iteration is in progress in any way other than by calling the iterator’s remove method.</p>
+<h2 id="Java-Input-x2F-Output"><a href="#Java-Input-x2F-Output" class="headerlink" title="Java Input&#x2F;Output"></a>Java Input&#x2F;Output</h2><h3 id="I-x2F-O-Streams"><a href="#I-x2F-O-Streams" class="headerlink" title="I&#x2F;O Streams"></a>I&#x2F;O Streams</h3><ul>
+<li><p>An <strong>input&#x2F;output stream</strong> is a (conceptually not necessarily finite) series of data items</p>
+<ul>
+<li>An <strong>input stream</strong> is a “flow” of data items from a <strong>source</strong> to a program<ul>
+<li>The program <strong>reads</strong> from the source (or from the stream)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>An <strong>output stream</strong> is a “flow” of data items from a program to a destination</p>
+<ul>
+<li>The program <strong>writes</strong> to the destination (or to the stream)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Input-Streams"><a href="#Input-Streams" class="headerlink" title="Input Streams"></a>Input Streams</h3><p>Note:<strong>Source</strong> may be the <strong>keyboard</strong>, a file on disk, <strong>a physical device</strong>, <strong>another program</strong>, even an <strong>array</strong> or <strong>String</strong> in the same program.</p>
+<h3 id="Output-Streams"><a href="#Output-Streams" class="headerlink" title="Output Streams"></a>Output Streams</h3><p><strong>Destination</strong> may be the <strong>console window</strong>, <strong>a file</strong> on disk, a physical device, another program, even an array or <strong>String</strong> in the same program.</p>
+<h3 id="Input-with-keyboard"><a href="#Input-with-keyboard" class="headerlink" title="Input with keyboard"></a>Input with keyboard</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    <span class="type">BufferedReader</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(System.in));</span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> input.readLine();</span><br><span class="line">    ...</span><br><span class="line">    input.close();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>At this point, we want to using the keyboard input be source, but the, System.in is a <strong>byte stream</strong>, so we have to <strong>wrap</strong> it.</p>
+<p>At same time, method in java.io throw exception under certain circumstancesstances, and you need <strong>catch</strong> them</p>
+<p>​	either throw exception in the <strong>method header</strong> or <strong>using try-catch</strong></p>
+<p><strong>InputStreamReader</strong></p>
+<ul>
+<li><p>An InputStreamReader is  bridge <strong>from byte streams to character streams</strong> It reads bytes and decodes them into characters using a specified charset (talk later). </p>
+<ul>
+<li>So it wrap System.in(a byte input stream) into a <strong>char stream reader (char input stream)</strong></li>
+</ul>
+  <img src="./Assists/imgs/image-20221206164748288.png" alt="image-20221206164748288" style="zoom:33%;" /></li>
+</ul>
+<p><strong>BufferedReader</strong></p>
+<ul>
+<li>An BufferedReader <strong>reads text from a character-input stream</strong>, buffering characters so as to provide for the efficient reading of characters, arrays, and lines.</li>
+</ul>
+<p>That’s why we need three different class here…. so messssssss</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(System.in))</span><br></pre></td></tr></table></figure>
+
+<p>This technique of slightly extending features or <strong>capabilities of an object</strong> by <strong>wrapping</strong> it <strong>inside</strong> <strong>another object</strong> is a popular object-oriented design pattern called the <strong>decorator pattern.</strong></p>
+<h3 id="An-Alternative-input-with-keyboard"><a href="#An-Alternative-input-with-keyboard" class="headerlink" title="An Alternative input with keyboard"></a>An Alternative input with keyboard</h3><p>using the Class from <code>java.util.Scanner</code></p>
+<p>e.g</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> input.nextLine();</span><br><span class="line">    ...</span><br><span class="line">    input.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note: the wraping Class to help people read from keyboard, mention that method already wrapped for u so call readLine() instead call nextLine()</p>
+<h3 id="Input-from-File"><a href="#Input-from-File" class="headerlink" title="Input from File"></a>Input from File</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    <span class="type">BufferedReader</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">FileReader</span>(<span class="string">&quot;data/test.txt&quot;</span>));</span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> input.readLine();</span><br><span class="line">    ...</span><br><span class="line">    input.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Console-Output"><a href="#Console-Output" class="headerlink" title="Console Output"></a>Console Output</h3><p>Ez to show</p>
+<p><code>System.out.println(&quot;Hello world&quot;)</code></p>
+<h3 id="File-Output-java-io"><a href="#File-Output-java-io" class="headerlink" title="File Output (java.io)"></a>File Output (java.io)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">  </span><br><span class="line"><span class="type">PrintWriter</span> <span class="variable">output</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PrintWriter</span>(<span class="keyword">new</span> <span class="title class_">BufferedWriter</span> (<span class="keyword">new</span> <span class="title class_">FileWriter</span>(<span class="string">&quot;data/test.txt&quot;</span>)));</span><br><span class="line">output.print(<span class="string">&quot;foo&quot;</span>);</span><br><span class="line">output.println(<span class="string">&quot; and bar&quot;</span>);</span><br><span class="line">...</span><br><span class="line">output.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>FileWriter</strong></p>
+<ul>
+<li>FileWriter is used to writes text to character files using a default buffer size</li>
+<li><strong>FileWriter is meant for writing streams of characters</strong> <ul>
+<li>It’s a <strong>character output stream</strong> (Talk about later what’s the diff between char stream and byte stream)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>BufferedWriter</strong></p>
+<ul>
+<li>An BufferedWriter <strong>writes text to a character-output stream</strong>, buffering characters so as to provide for the efficient writing of single characters, arrays, and strings.<ul>
+<li>It’s a text output stream</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>PrintWriter</strong></p>
+<ul>
+<li><p>An PrintWriter <strong>prints formatted representations</strong> of objects <strong>to</strong> a text-output stream</p>
+</li>
+<li><p>For the foramtted, that’s why we want to use PrintWriter</p>
+</li>
+<li><p>It’s disgusting to directly using the method form BufferedWritter, we need some util format method! which come from PrintWriter</p>
+</li>
+<li><p>(not from this course)Note: ofc you can directly use the BufferedWriter, but remember to close writer</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BufferedWriter</span> <span class="variable">writer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedWriter</span>(<span class="keyword">new</span> <span class="title class_">FileWriter</span>(<span class="string">&quot;asdasd.txt&quot;</span>));</span><br><span class="line">writer.write(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">writer.close();</span><br></pre></td></tr></table></figure>
+
+<p>  It’s <strong>inconvient</strong> to directly using BufferedWriter to wrap line :(</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="IOException"><a href="#IOException" class="headerlink" title="IOException"></a>IOException</h3><h4 id="A-number-of-java-io-constructors-and-methods-might-throw-raise-an-IOException"><a href="#A-number-of-java-io-constructors-and-methods-might-throw-raise-an-IOException" class="headerlink" title="A number of java.io constructors and methods might throw (raise) an IOException"></a>A number of java.io constructors and methods might throw (raise) an IOException</h4><p>Examples:</p>
+<p>​	files to be used as sources destinations may not exist  may not be readable and&#x2F;or writeable by the user of the program etc.</p>
+<h3 id="Standard-Stream"><a href="#Standard-Stream" class="headerlink" title="Standard Stream"></a>Standard Stream</h3><p>The utility class System in java.lang declares three standard streams:</p>
+<ul>
+<li>System.in</li>
+<li>System.out</li>
+<li>System.err</li>
+</ul>
+<p>You do not declare, open, or close these streams; but you can always use them without worrying about exceptions (Java already declare for you)</p>
+<h3 id="Byte-and-Character-Streams"><a href="#Byte-and-Character-Streams" class="headerlink" title="Byte and Character Streams"></a>Byte and Character Streams</h3><p>note: I don’t think they gonna let u write code about byte stream</p>
+<p>Java has two categories of streams:</p>
+<ul>
+<li>Byte streams are streams of 8-bit bytes <ul>
+<li>This is a kind of low-level I&#x2F;O that you rarely need</li>
+</ul>
+</li>
+<li>Character streams are streams of Unicode characters<ul>
+<li>This is preferred for text I&#x2F;O because it accounts for the “local” character set and supports <strong>internationalization</strong> with little additional effort</li>
+</ul>
+</li>
+</ul>
+<p>Note : <strong>Best practice</strong> is to use character streams with textual I&#x2F;O</p>
+<h3 id="Buffered-Streams"><a href="#Buffered-Streams" class="headerlink" title="Buffered Streams"></a>Buffered Streams</h3><p>Buffered streams <strong>minimize</strong> <strong>disk access</strong> for reading&#x2F;writing files, and generally have <strong>performance</strong> <strong>advantages</strong> over unbuffered streams</p>
+<p>Best practice is to “wrap” input and output character streams to create buffered versions</p>
+<p>I already show how it works and java standard description above</p>
+<h3 id="Files-and-Paths"><a href="#Files-and-Paths" class="headerlink" title="Files and Paths"></a>Files and Paths</h3><p>The File class (an original part of Java) and the Path interface (new in Java 1.7) allow you to manipulate directories and files and the “paths” to them in the file system, e.g.:</p>
+<ul>
+<li>Check file existence and permissions, create files and set permissions, delete files, etc</li>
+</ul>
+<p>Note: just take a look </p>
+<h2 id="Java-Loose-Ends"><a href="#Java-Loose-Ends" class="headerlink" title="Java Loose Ends"></a>Java Loose Ends</h2><p>Few Java issues introduced earlier deserve a more in-depth treatment:</p>
+<ul>
+<li>– Try-Catch and Exceptions </li>
+<li>– Members (static vs. instance)</li>
+<li>– Nested interfaces and classes</li>
+<li>– Access modifiers – “Final”</li>
+</ul>
+<h3 id="Exceptions"><a href="#Exceptions" class="headerlink" title="Exceptions"></a>Exceptions</h3><p>An exception indicates a <strong>problem</strong> with an application that <strong>entails</strong> (in Java) <strong>a dramatic change of control flow</strong></p>
+<p>Vocabulary: Exceptions (and Errors) are</p>
+<ul>
+<li>“thrown” by a component implementation</li>
+<li>“caught” by a client</li>
+</ul>
+<h3 id="Syntax-of-Try-Catch"><a href="#Syntax-of-Try-Catch" class="headerlink" title="Syntax of Try-Catch"></a>Syntax of Try-Catch</h3><p>just <code>try&#123;&#125;catch(SOME_EXCEPTION e) &#123;&#125;</code> the ez one</p>
+<p>you can keep catch different exception, e.g. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">		statements</span><br><span class="line">&#125; <span class="keyword">catch</span>(exceptionType1 identifier1) &#123;</span><br><span class="line">		handler <span class="keyword">for</span> type1</span><br><span class="line">&#125; <span class="keyword">catch</span>(exceptionType2 identifier2) &#123;</span><br><span class="line">		handler <span class="keyword">for</span> type2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> If <strong>nothing</strong> is thrown during execution of the statements in the try block, try block finishes successfully and catch block will ignored, then the program keep going</p>
+<p>if something is thrown exception:</p>
+<ol>
+<li>the rest of try block code is skipped</li>
+<li>The catch clauses are <strong>examined</strong> <strong>top to bottom</strong> for the first <strong>matching catch</strong></li>
+<li>If an appropriate catch clause is found: <ol>
+<li>The body of the catch clause is executed</li>
+<li>The remaining catch clauses are skipped</li>
+</ol>
+</li>
+<li>If no such catch clause is found:<ol>
+<li>The exception is thrown to the <strong>outer block</strong>, which is either<ol>
+<li>A try block (that potentially handles it, in the same manner)	</li>
+<li>A method body (resulting in it being thrown to its client)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>Best practice</strong> suggests exceptions should be <strong>reserved for unexpected</strong> situations:</p>
+<ul>
+<li>Problems external to the application<ul>
+<li>there is a hardware problem with a disk drive</li>
+</ul>
+</li>
+<li>Resource exhaustion<ul>
+<li>(out of memo)</li>
+</ul>
+</li>
+<li>Problems that cannot be handled with checkable preconditions in contracts<ul>
+<li>Example: a file does not exist—because it has been deleted after its existence has already been “confirmed”.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Hierarchy-of-Theowable"><a href="#Hierarchy-of-Theowable" class="headerlink" title="Hierarchy of Theowable"></a>Hierarchy of Theowable</h3><p>The diagram of Throwable</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="Assists/imgs/image-20221207000346698.png" alt="image-20221207000346698"></h3><p>The <strong>Throwable</strong> class is the <strong>superclass</strong> of <strong>all errors and exceptions in the Java language</strong>. Only objects that are instances of this class (or one of its subclasses) are thrown by the Java Virtual Machine or can be thrown by the Java throw statement.</p>
+<h3 id="Unrecoverble-and-recoverble-error"><a href="#Unrecoverble-and-recoverble-error" class="headerlink" title="Unrecoverble and recoverble error"></a>Unrecoverble and recoverble error</h3><p>Note: An <strong>unrecoverable</strong> error is a type of error that <strong>cannot be fixed</strong> or resolved. This means that the <strong>system or program encountering the error</strong> will be unable to continue functioning properly, and may need to be restarted or shut down completely. A <strong>recoverable</strong> error, on the other hand, <strong>is an error that can be fixed</strong> or resolved <strong>without disrupting the operation of the system or program.</strong> In most cases, a recoverable error will allow the system or program to continue running, but it may require some corrective action on the part of the user or the system itself to fix the problem.</p>
+<p><strong>In OSU</strong></p>
+<p>“<strong>Unrecoverable</strong>”: hardware, JVM, or application error (e.g., “out of memory)</p>
+<p>​	You have to restart computer or change ur hardware</p>
+<p>“<strong>Recoverable</strong>”: application problem (e.g., “file not found”)</p>
+<p>​	You can just reenter the file address</p>
+<h3 id="Few-Error-and-exception"><a href="#Few-Error-and-exception" class="headerlink" title="Few Error and exception"></a><strong>Few Error and exception</strong></h3><p><img src="Assists/imgs/image-20221207001418385.png" alt="image-20221207001418385"></p>
+<h3 id="Unchecked-vs-Checked"><a href="#Unchecked-vs-Checked" class="headerlink" title="Unchecked vs. Checked"></a>Unchecked vs. Checked</h3><ul>
+<li><p><strong>Unchecked</strong> exceptions are:</p>
+<ul>
+<li>– <strong>Error</strong> and its subclasses</li>
+<li><strong>RuntimeException</strong> and its subclasses</li>
+</ul>
+</li>
+<li><p>The rest are <strong>checked</strong> exceptions</p>
+<ul>
+<li><p>“Checked” means that the compiler checks that a method whose body contains a statement that might throw the exception either <strong>catches</strong> it, or explicitly “propagates it up the call chain” by declaring that it also <strong>throws</strong> the exception</p>
+<p><strong>For example:</strong> if you using <strong>BufferedReader</strong>, you have <strong>either</strong> <strong>catch</strong> or <strong>throws</strong>, because BufferedReader may cause IOException</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Members"><a href="#Members" class="headerlink" title="Members"></a>Members</h3><p>A class may have different kinds of members:</p>
+<ol>
+<li>Variables&#x2F;fields&#x2F;data members</li>
+<li>Constructors</li>
+<li>Methods </li>
+<li>Nested classes</li>
+</ol>
+<p> All except constructors may be either <strong>static members</strong> or *<em>instance members</em></p>
+<p>Note: <strong>static members</strong> of  a class also call <strong>class members</strong>(There are a lot different way to call it, just do whatever you want, <strong>static field</strong> or <strong>static variable,</strong> or just <strong>static members</strong>, or just <strong>class members</strong>)</p>
+<h3 id="Static-vs-Instance-Variables"><a href="#Static-vs-Instance-Variables" class="headerlink" title="Static vs. Instance Variables"></a>Static vs. Instance Variables</h3><p> the static method or static member’s value are share to current program when it running </p>
+<p>Here is the OSU explain:</p>
+<ul>
+<li>At run-time, a Java program has separate representations for:<ul>
+<li>All <strong>static variables</strong> for each <strong>class</strong> C</li>
+<li>All instance variables for each <strong>instance</strong> of C, i.e., for each object with dynamic type C</li>
+</ul>
+</li>
+<li>Bytecode for C constructors, methods, and nested classes is part of the run-time representation of class C</li>
+</ul>
+<h3 id="Static-Initialization-Blocks"><a href="#Static-Initialization-Blocks" class="headerlink" title="Static Initialization Blocks"></a>Static Initialization Blocks</h3><p>To initialize static variables in a class, you may write a static initialization block that looks like this:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">	<span class="comment">// Code to initialize static variables</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This code is automatically executed when the <strong>class is loaded</strong>, i.e., once at the very beginning of program execution</p>
+<p>Note: as I said, “it will initial <strong>at the start of the execution</strong>“</p>
+<h3 id="Nested-Interfaces"><a href="#Nested-Interfaces" class="headerlink" title="Nested Interfaces"></a>Nested Interfaces</h3><p>An interface may be nested within another interface</p>
+<ul>
+<li>Example (from OSU CSE components)<ul>
+<li>Map.Pair&lt;K,V&gt;</li>
+<li>Map.Entry&lt;K,V&gt;</li>
+</ul>
+</li>
+</ul>
+<h3 id="Nested-Classes"><a href="#Nested-Classes" class="headerlink" title="Nested Classes"></a>Nested Classes</h3><p>A class that is nested as a member of another class may be:</p>
+<ul>
+<li><p>A static nested class</p>
+<ul>
+<li>A static nested class <strong>does not have access</strong> to instance members of its enclosing class<ul>
+<li>Effectively, it’s a top-level class declared inside another class since it “logically belongs”</li>
+<li>Example (from OSU CSE components): MapSecondary.SimplePair</li>
+<li>Example (from Java libraries): AbstractMap.SimpleEntry&lt;K,V&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>An <strong>instance nested class</strong>, which is called an <strong>inner class</strong></p>
+<ul>
+<li><p>the Node we written before, right?</p>
+</li>
+<li><p>Each instance of an inner class belongs to an instance of its enclosing class</p>
+</li>
+<li><p>Has access to generic parameters, variables, methods, etc., of its enclosing instance</p>
+</li>
+<li><p>Examples (from OSU CSE components): </p>
+<ul>
+<li>Stack2.Node</li>
+</ul>
+</li>
+<li><p>Stack2.Stack2Iterator</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="Assists/imgs/image-20221207005422721.png" alt="image-20221207005422721"></p>
+<h3 id="Access-Modifiers"><a href="#Access-Modifiers" class="headerlink" title="Access Modifiers"></a>Access Modifiers</h3><p>There are <strong>four access modifiers</strong> in Java</p>
+<ul>
+<li>public <ul>
+<li>(Only public and “package private” apply to top-level units declare interface and classes, interface members can be public (the default) or private (not used in OSU components); class members can be any of the four.)<ul>
+<li>Note: for the member, we talking about <strong>variable</strong> rather than method.</li>
+</ul>
+</li>
+<li>A <strong>top-level unit</strong> declared <strong>public</strong> is <strong>accessible</strong> from <strong>anywhere</strong></li>
+<li>A <strong>member</strong> declared <strong>public</strong> is <strong>accessible</strong> from <strong>anywhere too</strong><ul>
+<li>So long as the top-level unit it’s in is also accessible, which henceforth goes without saying</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>protected<ul>
+<li>A top-level unit declared without any access modifier is <strong>accessible</strong> from <strong>anywhere</strong> <strong>within the same package</strong><ul>
+<li>The <code>protected</code> keyword is an access modifier used for attributes, methods and constructors, making them accessible in the same package and subclasses.</li>
+</ul>
+</li>
+<li>A class member declared without any access modifier is <strong>accessible</strong> from a<strong>nywhere within the same package</strong><ul>
+<li>Everyone could change it into same pack by adding this as its first line by : package NAME; ()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>default(package private)</li>
+<li>privarte<ul>
+<li>A class (or interface) member declared private is <strong>accessible</strong> <strong>only</strong> from within the class (or interface) <strong>containing</strong> the <strong>private member</strong></li>
+<li><strong>Best practice</strong> is to make all members in <strong>interfaces</strong> <strong>public</strong> and all <strong>static and instance variables in classes private</strong>, and to offer public methods with which clients may indirectly manipulate their values</li>
+<li><strong>An exception</strong>: <strong>constants</strong>, which are normally public static final variables</li>
+</ul>
+</li>
+</ul>
+<p><img src="Assists/imgs/image-20221207004941475.png" alt="image-20221207004941475"></p>
+<h3 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h3><ul>
+<li>A class declared final may not be extended </li>
+<li>A method declared final may not be overridden </li>
+<li>A variable declared final may not be modified once it is given a value<ul>
+<li>Which is why it is often called a “constant” <ul>
+<li>Be careful! For <strong>a reference variable</strong> (or parameter): the <strong>reference value</strong> <strong>cannot</strong> be <strong>modified</strong>, but the <strong>object value can be modified</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A formal parameter declared final may not be modified inside the method</li>
+</ul>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="../CSE2231%20Midterm%202%20review/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="../CSE%202231%20midterm%201%20review/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/Sma1lboy">Page by Jackson</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="../../../../js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-box">
+        <div class="search-title">
+          <!-- <span class="search-icon-input">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </span> -->
+          
+            <input type="text" class="search-input" id="search-input" placeholder="search">
+          
+          <span class="search-close-icon" id="search-close-icon">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-close"></i>
+            </a>
+          </span>
+        </div>
+        <div class="search-result" id="search-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    // inputArea.onclick = function() {
+    //   getSearchFile()
+    //   this.onclick = null
+    // }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
+        getSearchFile()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
+      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                }
+                str += "<hr></li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>

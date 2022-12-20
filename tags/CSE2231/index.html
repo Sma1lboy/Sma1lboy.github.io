@@ -11,8 +11,8 @@
   
   <title>
     
-      Git distributed version control system 
-      
+      Tag 
+       : CSE2231
       
     
   </title>
@@ -27,16 +27,12 @@
 
   <!-- hexo site css -->
   
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/common.css">
-<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="../../../../css/base.css">
+<link rel="stylesheet" href="../../../../css/common.css">
+<link rel="stylesheet" href="../../../../iconfont/iconfont.css">
 
 
   
-
-  
-    
-<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -47,10 +43,10 @@
   <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
   <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
   
-<script src="/js/fancybox.js"></script>
+<script src="../../../../js/fancybox.js"></script>
 
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Jackson's note" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="Jackson's note" type="application/atom+xml">
 </head>
 
 
@@ -91,45 +87,90 @@
 
 
       <div class="main">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
-</script>
+<!-- last: 按年份把文章分组，当前遍历到的年份 -->
+<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="post">
-  <h3 class="date">
-    Dec 19, 2022
-  </h3>
-  <h1>
-    Git distributed version control system
-  </h1>
-  <div class="content markdown-body">
-    <h3 id="分布式版本控制"><a href="#分布式版本控制" class="headerlink" title="分布式版本控制"></a>分布式版本控制</h3><p>它允许软件开发者可以共同参与一个软件开发项目，<strong>但是不必在相同的网络系统下工作</strong>。其作法是在每个开发者电脑中复制一份完整的代码库以及完整历史。因此在无法连接网络时，仍可以进行软件的分支及合并，可以加速大部分的作业，增加此情形可以进行的工作，而且系统的代码库可以在多家电脑上备份，不需靠单一位置的备份。而多个位置的代码库再透过其他机制来达到同步。</p>
-<h3 id="版本控制的好处"><a href="#版本控制的好处" class="headerlink" title="版本控制的好处"></a>版本控制的好处</h3><p>本质上是一种记录文件内容变化 记录文件修改历史记录, 从而让用户可以查看历史版本, 方便版本切换</p>
-<h4 id="为什么需要版本控制"><a href="#为什么需要版本控制" class="headerlink" title="为什么需要版本控制"></a>为什么需要版本控制</h4><p>不仅仅是个人开发 团队协作更需要tracking version</p>
-<h2 id="集中式版本控制-vs-分布式版本控制"><a href="#集中式版本控制-vs-分布式版本控制" class="headerlink" title="集中式版本控制 vs 分布式版本控制"></a>集中式版本控制 vs 分布式版本控制</h2><h3 id="集中式版本控制"><a href="#集中式版本控制" class="headerlink" title="集中式版本控制"></a>集中式版本控制</h3><p>CVS SVN(Subversion)</p>
-<p>拥有单一的集中管理的服务器, 保存所有文件的修订版本, 协同工作的人们都空过客户端链接这台服务器, 取出最新的文件提交更新.</p>
-<p>好处: 每个人都可以一定程度上看到其他人做了什么 便于管理员管理</p>
-<p>缺点: 中央服务器的单点故障, 如果服务器宕机, 谁都无法提交更新, 无法协同工作</p>
-<h2 id="Git运行流程Processing"><a href="#Git运行流程Processing" class="headerlink" title="Git运行流程Processing"></a>Git运行流程Processing</h2>
-  </div>
-  
+<div class="container archives">
+  <div class="post-list">
     
-      <a id="older" class="blog-nav" href="/2022/12/18/SDD%20Introduction/">OLDER&nbsp;&gt;</a>
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2022</span>
+          </h2>
+        </div>
       
-        
+      <div class="post-item" title="CSE 2231 Midterm 1 review">
+        <div class="time-m-d">12-19</div>
+        <div class="title">
+          <a href="../../2022/12/19/CSE%202231%20midterm%201%20review/">
             
+              <span>CSE 2231 Midterm 1 review</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="CSE 2231 final review">
+        <div class="time-m-d">12-19</div>
+        <div class="title">
+          <a href="../../2022/12/19/CSE2231%20Final%20Exam/">
+            
+              <span>CSE 2231 final review</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="CSE 2231 Midterm 2 review">
+        <div class="time-m-d">12-19</div>
+        <div class="title">
+          <a href="../../2022/12/19/CSE2231%20Midterm%202%20review/">
+            
+              <span>CSE 2231 Midterm 2 review</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Git distributed version control system">
+        <div class="time-m-d">12-18</div>
+        <div class="title">
+          <a href="../../2022/12/18/git/">
+            
+              <span>Git distributed version control system</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="SDD Introduction">
+        <div class="time-m-d">12-18</div>
+        <div class="title">
+          <a href="../../2022/12/18/SDD%20Introduction/">
+            
+              <span>SDD Introduction</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="first-post">
+        <div class="time-m-d">12-17</div>
+        <div class="title">
+          <a href="../../2022/12/17/first-post/">
+            
+              <span>first-post</span>
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
 </div>
+
         <div class="footer">
   
     <div class="footer-more">
@@ -161,7 +202,7 @@
 </div>
 
 
-<script src="/js/backtotop.js"></script>
+<script src="../../../../js/backtotop.js"></script>
 
 
 

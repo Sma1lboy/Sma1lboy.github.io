@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="Jackson" />
+  <meta name="description" content="Jackson&#39;s personal blog" />
+  
+  
+  <title>
+    
+      CSE 2231 Midterm 1 review 
+      
+      
+    
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="../../../../css/base.css">
+<link rel="stylesheet" href="../../../../css/common.css">
+<link rel="stylesheet" href="../../../../iconfont/iconfont.css">
+
+
+  
+
+  
+    
+<link rel="stylesheet" href="../../../../css/post.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="../../../../js/fancybox.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="Jackson's note" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <a href="/">JACKSON</a>
+</div>
+
+
+      <p class="links">
+  
+    <a title="archives" target="" href="/archives/">
+      <i class="iconfont icon-bookmark"></i>
+    </a>
+  
+    <a title="github" target="_blank" href="https://gist.github.com/Sma1lboy">
+      <i class="iconfont icon-github"></i>
+    </a>
+  
+    <a title="email" target="" href="541898146chen@gmail.com">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+    <a title="twitter" target="" href="https://twitter.com/Sma1lboy">
+      <i class="iconfont icon-twitter"></i>
+    </a>
+  
+    <a title="wechat" target="" href="jacksonchen0825">
+      <i class="iconfont icon-wechat"></i>
+    </a>
+  
+    <a title="rss" target="_blank" href="/atom.xml">
+      <i class="iconfont icon-rss"></i>
+    </a>
+  
+</p>
+
+
+      <div class="main">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Dec 19, 2022
+  </h3>
+  <h1>
+    CSE 2231 Midterm 1 review
+  </h1>
+  <div class="content markdown-body">
+    <h1 id="Mathematic-models"><a href="#Mathematic-models" class="headerlink" title="Mathematic models"></a>Mathematic models</h1><p>Each Variable in the <strong>program has a type</strong> (“program type”)</p>
+<p>​	e.g. int, double, …</p>
+<p>Each program type has a <span style="color:Red"><strong>mathmatical type</strong></span>.  that <strong>model</strong> it: any variable of that program type as having a value from its mathematical model’s mathematical space&#x2F;domain:</p>
+<p>​	e.g. integer, real, whole number</p>
+<table>
+<thead>
+<tr>
+<th>Program type</th>
+<th align="left">Mathematical type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>boolean</td>
+<td align="left">boolean</td>
+</tr>
+<tr>
+<td>char</td>
+<td align="left">character</td>
+</tr>
+<tr>
+<td>int</td>
+<td align="left">Integer (-2147483648 through 2147483647)</td>
+</tr>
+<tr>
+<td>double</td>
+<td align="left">real (about ±10±308, 15 significant digits)</td>
+</tr>
+<tr>
+<td>String</td>
+<td align="left">string of character Rep: &lt;&gt;</td>
+</tr>
+<tr>
+<td>NaturalNumber</td>
+<td align="left">Integer (non-negative)</td>
+</tr>
+<tr>
+<td>Queue&lt;T&gt;</td>
+<td align="left">string of T Rep: &lt;&gt;</td>
+</tr>
+<tr>
+<td>Stack&lt;T&gt;</td>
+<td align="left">string of T Rep: &lt;&gt;</td>
+</tr>
+<tr>
+<td>Sequence&lt;T&gt;</td>
+<td align="left">stirng of T Rep: &lt;&gt;</td>
+</tr>
+<tr>
+<td>Set&lt;T&gt;</td>
+<td align="left">finite set of T  Rep:  <strong>{ }</strong> or by <strong>empty_set</strong></td>
+</tr>
+<tr>
+<td>Map&lt;K,V&gt;</td>
+<td align="left">finite set of (K,V) (with function property)</td>
+</tr>
+<tr>
+<td>BinaryTree<T></td>
+<td align="left">binary tree of T</td>
+</tr>
+<tr>
+<td>SortingMachine</td>
+<td align="left">ordered triple (a.k.a. three-tuple): a boolean, a binary relation on T, and a finite multiset of T.</td>
+</tr>
+</tbody></table>
+<p>*****Vacuously True:  p &#x3D;&gt; q where p&#x3D; false q &#x3D; false, then p &#x3D;&gt; q is true.</p>
+<p>string of T : &lt;t1, t2, t3&gt;</p>
+<p>set of T: {1,2, 3}</p>
+<p>Entries of a String:  The set whose elements are exactly the entries of a string s (i.e., the string’s entries without duplicates and ignoring order) is denoted by entries(s)</p>
+<p>e.g. : entries(&lt; 2, 2, 2, 1 &gt;) &#x3D; { 1, 2 }, entries(&lt; &gt;) &#x3D; { }</p>
+<h1 id="Abstract-Classes"><a href="#Abstract-Classes" class="headerlink" title="Abstract Classes"></a>Abstract Classes</h1><h2 id="introduce-of-abstract-classes"><a href="#introduce-of-abstract-classes" class="headerlink" title="introduce of abstract classes"></a>introduce of abstract classes</h2><p>The Secondary abstract class is an incomplete class that covers some redundancy methods we don’t have to write again in our subclass. </p>
+<p>e.g. the add method between NaturalNumber and NaturalNumber, we don’t have to know what’s the <strong>represent</strong> inner the NaturalNumber’s child method, because the add method is <strong>using the implemented method from the child method to finish add operation</strong></p>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>Every class in Java extends Object, which is a special built-in class that provides default implementations for the following instance methods (among a few others that are not so important):</p>
+<ul>
+<li>boolean equals(Object obj)  <ul>
+<li>The default implementation in <strong>Object checks reference equality</strong>, though we expect object value equality! So, we (almost always) need to override this method.</li>
+</ul>
+</li>
+<li>int hashCode()<ul>
+<li>The default implementation in Object <strong>returns an int</strong> that <strong>depends</strong> on the <strong>reference value of this</strong>, though we expect it to depend on the object value! So, we (almost always) need to override this method.</li>
+</ul>
+</li>
+<li>String toString()<ul>
+<li>The default implementation in Object <strong>returns a String</strong> that shows the <strong>reference value of this,</strong> though we expect it to show the object value! So, we (almost always) need to override this method</li>
+</ul>
+</li>
+</ul>
+<p>Java permits you to write a kind of “partial” or “<strong>incomplete</strong>” class that <strong>contains</strong> <strong>bodies</strong> for <strong>some</strong> <strong>but</strong> (typically) not all of the methods of the interfaces it claims to implement</p>
+<p>​		Because some methods still <strong>might not have bodies</strong>, Java <strong>WILL NOT</strong> let you <strong>instantiate</strong> an abstract class; that is, you <strong>cannot</strong> use an abstract class like a normal class and <strong>create a new object</strong> from it.</p>
+<p>Every <strong>class(include normal class and abstract class)</strong> to Object class’s relationshipt is <strong>implicit</strong>, which means : every class that does not extend some other class directly extends Object.</p>
+<p>e.g. NaturalNumberSecondary</p>
+<p>This abstract class has code that overrides the default implementations (inherited from Object) of equals, hashCode, and toString for NaturalNumbers, so they do “the right thing”, i.e., <strong>so their behaviors are based on object values rather than reference values.</strong></p>
+<p>This abstract class also <strong>has code that implements all the methods introduced in the NaturalNumber interface(add, derement, increment, etc.)</strong> but not those inherited by it from other interfaces – Details of this code later… see “Resources” </p>
+<p>– Note that this still <strong>leaves the methods</strong> introduced in the <strong>Standard</strong> and <strong>NaturalNumberKernel</strong> interfaces without bodies; hence, it’s an abstract class</p>
+<p>Secondary abstract class leaves kernal classes with few  standard class method</p>
+<pre><code>- Standard (i.e., newInstance, clear, and transferFrom) 
+- – NaturalNumberKernel (i.e., multiplyBy10, divideBy10, and isZero)
+</code></pre>
+<h4 id="Why-we-need-Abstract-classes"><a href="#Why-we-need-Abstract-classes" class="headerlink" title="Why we need Abstract classes?"></a>Why we need Abstract classes?</h4><p>Factoring Out Common Code -&gt; reduce redundancy code</p>
+<p><strong>Some Method bodies that can be written once and work for any implementation of</strong> NaturalNumberKernel because <strong>they are programmed to that interface</strong>—have been <strong>factored out into an abstract class</strong></p>
+<blockquote>
+<p>Yes, NaturalNumber interface is extends the NaturalNumberKernal interface, we programmed everything based on NaturalNumberKernal. If NaturalNumberKernal methods work, then our  NaturalNumber methods should works too.</p>
+</blockquote>
+<blockquote>
+<p>Keep “factored out into an abstract class” think that to move out all common factor code to abstract class</p>
+</blockquote>
+<p>Therefore, This leaves only constructors and a few kernel methods to be implemented in NaturalNumber1L, NaturalNumber2, and future kernel classes (if any)</p>
+<p>The code in each kernel class (e.g., in the example <strong>NaturalNumber1L</strong> and NaturalNumber2) implements only 4 constructors and 6 methods each, not all 21 methods of NaturalNumber </p>
+<p> But, implementing these <strong>few methods</strong> is <strong>different</strong> than implementing the other 15 layered methods where you can call the <strong>kernel methods(The methods we impelment from our kernel class)</strong> to do the work!</p>
+<h1 id="JUnit-Test-Fixture-Pattern"><a href="#JUnit-Test-Fixture-Pattern" class="headerlink" title="JUnit Test Fixture Pattern"></a>JUnit Test Fixture Pattern</h1><h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>(UUT)Unit Under Test is not enough to test every kernel class.</p>
+<p>Every time we trying to run test fixtrue for different kernel class, we have to modify all the test cases.</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Single-Point control over change</p>
+<p>“Re-route” all UUT constructor calls to <strong>another method</strong>, which <strong>then calls the UUT constructor</strong>, so only the body of that <strong>one method needs to be changed</strong> to accommodate a different UUT</p>
+<p>Instead of calling the UUT’s constructor directly here, you call a method (perhaps named constructorTest), which then calls the UUT’s constructor.</p>
+<p>There is constructorTest and constructorRef, if there is reference implementation of the same interface</p>
+<h3 id="Isolating-This-Change-Point"><a href="#Isolating-This-Change-Point" class="headerlink" title="Isolating This Change Point"></a>Isolating This Change Point</h3><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220924204004644.png" alt="image-20220924204004644" style="zoom: 33%;" />
+
+<p>makes the test cases class become abstract class, then we could implement our constructorTest and constructorRef method in the child Class. We could test different initial constructor by create different child class of test cases class.</p>
+<img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220924204251678.png" alt="image-20220924204251678" style="zoom:33%;" />
+
+<h3 id="protected-and-Abstract-method-keyword"><a href="#protected-and-Abstract-method-keyword" class="headerlink" title="protected and Abstract method keyword"></a>protected and Abstract method keyword</h3><p>​	protecteed means that this method may be called or overridden in a subclass (which is our intent for Stack1LTest), but may not even be called from any other class declared outside this package. It could called the method in the same package</p>
+<p>​	<strong>abstract in the method</strong> means this method <strong>must</strong> be <strong>overridden</strong> in some subclass.</p>
+<h4 id="Why-we-use-protected-and-abstract-here"><a href="#Why-we-use-protected-and-abstract-here" class="headerlink" title="Why we use protected and abstract here?"></a>Why we use protected and abstract here?</h4><p>​	我们需要在当前testcases class里面调用这个method, 但是这个method还没有被重写, 所以我们需要保证constructorTest and constructorRef在subclass里面被重写. Protected保证了当前method能被当前包所有类内访问</p>
+<h3 id="How-about-we-want-to-start-with-some-args-in-our-test-kernel-class"><a href="#How-about-we-want-to-start-with-some-args-in-our-test-kernel-class" class="headerlink" title="How about we want to start with some args in our test kernel class?"></a>How about we want to start with some args in our test kernel class?</h3><p>In a typical test case, it takes many lines of code just to construct the values on which to run a test!<br>For instance, suppose you want to test a method with this Stack<String> value as input: &lt;”a”, “stack”, “with”, “stuff”&gt;</p>
+<p>So! we need a Convenience Method (or helper method) to help us using constructorTest and constructorRef return a instance and add some input to the instance</p>
+<h4 id="varargs"><a href="#varargs" class="headerlink" title="varargs"></a>varargs</h4><p>​	e.g. Object… String… int… allow programmer to cal this method with zero or more arguments of type String.</p>
+<h1 id="Kernel-Implements-I-kernel-method"><a href="#Kernel-Implements-I-kernel-method" class="headerlink" title="Kernel Implements I (kernel method?)"></a>Kernel Implements I (kernel method?)</h1><p>Interpretation of Representation</p>
+<p>e.g. : For QueueKernel, one idea is to represent a Queue variable’s value by using a java.util.List variable</p>
+<p>​	By convention (of the OSU CSE components), a kernel class that directly represents the new type using a component from the Java libraries that is very similar, has a name ending in “L”</p>
+<p>​	– In this case, it is called Queue1L</p>
+<p>For Queue</p>
+<p>What existing components (including builtin types of Java, and the Java libraries) could you build it on top of?</p>
+<p>​	– In other words, what could you use as a <strong>data representation</strong> that could be <strong>interpreted as a Queue value?</strong></p>
+<h1 id="Version-Control-Using-Subversion"><a href="#Version-Control-Using-Subversion" class="headerlink" title="Version Control Using Subversion"></a>Version Control Using Subversion</h1><p>In team project, best practice is using version control system</p>
+<p>​	this is not limit to code, a version control system can handle non-code file as well</p>
+<h2 id="Key-idea-the-Repository"><a href="#Key-idea-the-Repository" class="headerlink" title="Key idea : the Repository"></a>Key idea : the Repository</h2><p>A <strong>central repository(Or remote repository, e.g. github is remote repository)</strong> keeps all files (in our case, Java code) and a history of all modifications to them</p>
+<ul>
+<li>A new team member can <strong>check out</strong> their own private copy from the repository</li>
+<li><strong>Each member</strong> can <strong>update</strong> their own copy to reflect the latest changes in the repository <ul>
+<li>e.g pull from remote repository</li>
+</ul>
+</li>
+<li><strong>Each member</strong> can <strong>commit</strong> changes from their own private copy to the repository</li>
+</ul>
+<h3 id="How-work-gets-done"><a href="#How-work-gets-done" class="headerlink" title="How work gets done?"></a>How work gets done?</h3><p>Repository holds <strong>master copy</strong> of all files </p>
+<p>​	– Never edited directly </p>
+<p>​	– Stores complete history, too!</p>
+<p>Each team member has a <strong>local copy</strong> (or <strong>working copy</strong>) in their own workspace </p>
+<p>​	– All file creation, editing, deletion occurs here</p>
+<p>Update and commit commands are used to <strong>synchronize</strong> local and master copies</p>
+<h3 id="The-Optimistic-Model"><a href="#The-Optimistic-Model" class="headerlink" title="The Optimistic Model"></a>The Optimistic Model</h3><p>Any team member can modify their local copy of any file at any time </p>
+<p>​	– No “locking” or other synchronization among team members takes place on local copies</p>
+<p>​	note: 本地的修改不回影响到队员之间的同步, 及 其他人并不需要等待某一个人完成修改</p>
+<p>On an <strong>update</strong>, the latest version from the repository often can be <strong>merged</strong> automatically into the local copy</p>
+<p>​	– This is especially so when team members edit different files, so conflicts are rare</p>
+<p>​	note: merge the file</p>
+<img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220924213559780.png" alt="image-20220924213559780" style="zoom: 33%;" />
+
+<p>check the progress of update and commit on the slide <a target="_blank" rel="noopener" href="http://web.cse.ohio-state.edu/software/2231/web-sw2/extras/slides/04a.Version-Control.pdf">version control</a></p>
+<h1 id="Kernel-Implementations-II"><a href="#Kernel-Implementations-II" class="headerlink" title="Kernel Implementations II"></a>Kernel Implementations II</h1><h3 id="Design-Trade-offs"><a href="#Design-Trade-offs" class="headerlink" title="Design Trade-offs"></a>Design Trade-offs</h3><p>As the implementer of a kernel class, it is entirely <strong>up to you</strong> <strong>how to represent every value allowed</strong> by <strong>the mathematical model</strong> in the <strong>kernel interface</strong>!</p>
+<p>Some designs will make the code for the methods you need to write:</p>
+<p> – Easier to understand and make correct</p>
+<p> – More efficient</p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220924214309879.png" alt="image-20220924214309879"></p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220924214320470.png" alt="image-20220924214320470"></p>
+<p>The implementer see different than the client.</p>
+<p>Think about NaturalNumber</p>
+<p>Represent It Using a String (above view)?</p>
+<p>Represent It Using a Array?</p>
+<p>Represent It Using a string? (mathematical model)</p>
+<p>​	NaturalNumber as a string of integer whose entries are the digits of that number</p>
+<p>​		e.g. &lt;1,2,3&gt; as NN 123</p>
+<p>​	Note: that here we are thinking of a possible mathematical model of the representation, <strong>not in terms of a specific Java component</strong> family</p>
+<p>​	The advantage to think this way -&gt; there are serveral component with this mathematical model</p>
+<h1 id="Sequence-On-Two-Stacks"><a href="#Sequence-On-Two-Stacks" class="headerlink" title="Sequence On Two Stacks ***"></a>Sequence On Two Stacks ***</h1><p>Have to look at HW and PPT</p>
+<h1 id="Kernel-Implementations-III"><a href="#Kernel-Implementations-III" class="headerlink" title="Kernel Implementations III"></a>Kernel Implementations III</h1><p>Two major question related to kernel class(mention: kernel class is the subclass of secondary that we only focus how to implements kernel interface method and standard interface method, other than that, anything from normal interface under the kernel interface is all base on the kernel interface API(methods))</p>
+<ol>
+<li>What <strong>data representation</strong> (a.k.a. data structure) should be used to represent a value of the new type being implemented?<ol>
+<li>Two level thinking<ol>
+<li>One is the level for which you are implementing a new kernel class • See the kernel interface for the new type you are creating<ol>
+<li>tower of abstractions for,</li>
+<li>what’s the data structure we are using to represent current class?</li>
+</ol>
+</li>
+<li>The other is the level directly below the level for the new kernel class you are creating • See the interfaces for the types of the variables you are using to represent a value of the new type\<ol>
+<li><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220924220257536.png" alt="image-20220924220257536"><ol>
+<li>client view: See the kernel interface for a description of what the software behaves like, what the client sees.<ol>
+<li>This is <strong>abstract state space</strong>: the set of all possible <strong>math model</strong> values as <strong>seen by a client</strong>.</li>
+</ol>
+</li>
+<li>implementer view: See the kernel class for a description of how the software achieves its behavior. <ol>
+<li>This is the <strong>concrete state space</strong>: the set of all possible math model values of the <strong>data representation</strong>.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220924220307843.png" alt="image-20220924220307843"></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>What <strong>algorithms</strong> should be used to manipulate that data representation to implement the contracts of the kernel methods?<ol>
+<li><a target="_blank" rel="noopener" href="http://web.cse.ohio-state.edu/software/2231/web-sw2/extras/slides/06.Kernel-Implementations-III.pdf">kernel 3</a> Restrict your attention to the <strong>states</strong> just before and just after a method call</li>
+<li>which leads to a device called a <strong>commutative diagram</strong></li>
+<li><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925202936404.png" alt="image-20220925202936404"><ol>
+<li>top arrow: <strong>abstract transition</strong>: for each state <strong>before</strong> the call, where it might <strong>end up</strong> according to the <strong>method’s contract</strong>.</li>
+<li>bottom arrow: This is the <strong>concrete transition</strong>: for each state before the call, where it might end up according to the <strong>method’s body</strong>.</li>
+</ol>
+</li>
+<li><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925203458562.png" alt="image-20220925203458562"></li>
+<li>Correctness<ol>
+<li>The <strong>kernel class</strong> <strong>correctly implements the kernel interface</strong> if and only if, for <strong>every method</strong> and for every legal input state for that method, the method body (over-thenup) <strong>always results in a state that satisfies the method contract</strong> (up-then-over)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="Kernel-Implementations-IV"><a href="#Kernel-Implementations-IV" class="headerlink" title="Kernel Implementations IV"></a>Kernel Implementations IV</h1><p>However, it is also <strong>important to record</strong> (document) the <strong>key design decisions</strong> illustrated in a commutative diagram, if they are not already recorded in the Java code itself</p>
+<p>wo key design decisions that need to be recorded in (Javadoc) comments:</p>
+<p>​		The <strong>representation invariant</strong>: Which “configurations” of values of the instance variables can ever arise?</p>
+<p>​		The <strong>abstraction function</strong>: How are the values of the instance variables to be <strong>interpreted</strong> to get an <strong>abstract value</strong>?</p>
+<h3 id="Commutative-Diagram"><a href="#Commutative-Diagram" class="headerlink" title="Commutative Diagram"></a>Commutative Diagram</h3><p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925204119437.png"></p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925204416241.png" alt="image-20220925204416241"></p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925204432622.png" alt="image-20220925204432622"></p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925204544308.png" alt="image-20220925204544308"></p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925204633447.png" alt="image-20220925204633447"></p>
+<p>Like this one</p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925205116685.png" alt="image-20220925205116685"></p>
+<p>The <strong>representation invariant</strong> <strong>characterizes the values that the data representation</strong> (instance variables) <strong>might have at the end of each kernel method body, including the constructor(s)</strong></p>
+<p>​	The representation invariant is made to hold by the method bodies’ code, and it is recorded in the convention clause in a (Javadoc) comment for the kernel class</p>
+<h3 id="Variable-Life-Cycle-Client"><a href="#Variable-Life-Cycle-Client" class="headerlink" title="Variable Life Cycle: Client"></a>Variable Life Cycle: Client</h3><ul>
+<li>Declared</li>
+<li>Initialized</li>
+<li>Called</li>
+<li>goes out of scope (destory)</li>
+</ul>
+<h3 id="representation-invariant"><a href="#representation-invariant" class="headerlink" title="representation invariant"></a>representation invariant</h3><p>@convention tag for representation Invariant</p>
+<p><strong>$this</strong> is special notation to name the data representation of this in such comment</p>
+<h3 id="Summarize"><a href="#Summarize" class="headerlink" title="Summarize"></a>Summarize</h3><ul>
+<li>The constructor(s) must make the representation invariant true</li>
+<li>The representation invariant may be <strong>assumed to be true at the beginning</strong> of each method body</li>
+<li>Each method body must make the representation invariant true (again) a<strong>t the time it returns</strong></li>
+</ul>
+<p>The Abstraction Function: The abstraction function describes how to interpret any concrete value (that satisfies the representation invariant) as an abstract value</p>
+<p>帮忙解释data rep to abstract value 的function</p>
+<p>The abstraction function is not computed by any code, but is merely recorded in the correspondence clause in a (Javadoc) comment for the kernel class</p>
+<h3 id="Kernel-Purity-Rule"><a href="#Kernel-Purity-Rule" class="headerlink" title="Kernel Purity Rule"></a>Kernel Purity Rule</h3><p>Kernel Purity Rule — <strong>No constructor or method body in the kernel class</strong> should c<strong>all any public method</strong> from the <strong>same component</strong> family</p>
+<p>​		Every public method in the component family relies (for its correctness) on the representation invariant being satisfied when it is called, and this might not be true when a call is made from inside a method of the kernel class</p>
+<p>​		Implications of the kernel purity rule: </p>
+<p>​		– No public kernel method should call any other public kernel method from the same class </p>
+<p>​		– No public kernel method should call itself recursively </p>
+<p>​		– No method (public or private) in the kernel class should call any layered&#x2F;secondary method from the same component family</p>
+<h1 id="Hashing"><a href="#Hashing" class="headerlink" title="Hashing"></a>Hashing</h1><p>Before we all using linear algorithm to search add or remove</p>
+<p>Instead of searching through all the items, store the items in many smaller buckets and search through only one bucket that</p>
+<h3 id="How-To-Identify-The-Bucket"><a href="#How-To-Identify-The-Bucket" class="headerlink" title="How To Identify The Bucket"></a>How To Identify The Bucket</h3><p><strong>h(x) mod m</strong> this method giving a index of some bucket</p>
+<p>The function that maps each value of type T to an integer is called the <strong>hash function</strong> we guaranteed to get the index of some bucket</p>
+<h4 id="hashCode-Method"><a href="#hashCode-Method" class="headerlink" title="hashCode Method"></a>hashCode Method</h4><p>the type <strong>Object</strong> defines this instance method to <strong>compute h</strong>, i.e., as the programmatic version of <strong>a hash function</strong>: public int hashCode()</p>
+<p><strong>Note</strong>: As a best practice, nearly every type should override the default implementation of this method</p>
+<p>hashCode always returns the same int hash value for the same Object Class (PhoneNumber class) value</p>
+<h4 id="An-Empirical-Matter"><a href="#An-Empirical-Matter" class="headerlink" title="An Empirical Matter"></a>An Empirical Matter</h4><p> • How well hashing distributes the data among buckets depends, in part, on the data themselves </p>
+<p>• Your worst enemy, knowing your hash function, could always provide data that would result in no performance gain over linear search </p>
+<p><strong>– Everything might fall into one bucket…</strong></p>
+<h1 id="Binary-Tree"><a href="#Binary-Tree" class="headerlink" title="Binary Tree"></a>Binary Tree</h1><h3 id="❌Haven’t-solve-What’s-the-Binary-Tree’s-Mathematical-value"><a href="#❌Haven’t-solve-What’s-the-Binary-Tree’s-Mathematical-value" class="headerlink" title="(❌Haven’t solve)What’s the Binary Tree’s Mathematical value?"></a>(❌Haven’t solve)What’s the Binary Tree’s Mathematical value?</h3><p>binary Tree! Of course BinaryTree’s Mathematical model is binary tree!</p>
+<h3 id="Traversal-Orders"><a href="#Traversal-Orders" class="headerlink" title="Traversal Orders"></a>Traversal Orders</h3><ul>
+<li><p>Pre-order: root is visited before left and right</p>
+</li>
+<li><p>In-order: root is visited between left and right (this order iterator in BinaryTree)</p>
+</li>
+<li><p>Post-order: root is visited after left and right</p>
+</li>
+</ul>
+<h1 id="Binary-Search-Tree-BST"><a href="#Binary-Search-Tree-BST" class="headerlink" title="Binary Search Tree (BST)"></a>Binary Search Tree (BST)</h1><p>BST are general </p>
+<p>BSTs may be used to search for items of any type T for which <strong>one has defined a total preorder</strong>, i.e., a <strong>binary relation</strong> on T that is <strong>total</strong>, <strong>reflexive</strong>, and <strong>transitive</strong></p>
+<ul>
+<li>A <strong>binary relation</strong> on T may be viewed as a set of ordered pairs of T, or as a <strong>boolean-valued</strong> function <strong>R</strong> of two parameters of type T that is true iff that pair is in the set</li>
+<li>total : R(x, y) or R(y, x)</li>
+<li>Reflexive R(x, x)</li>
+<li>Transitive: if R(a, b) and R(b, c) then R(a, c)</li>
+</ul>
+<p>e.g. kind of example </p>
+<ol>
+<li>T &#x3D; Integer</li>
+<li>The ordering is &lt;&#x3D; </li>
+<li>For simplicity we assume that no two nodes in a BST have the same labels</li>
+</ol>
+<p>Note: Both these simplifications are inessential: BSTs are not limited to these situation</p>
+<h4 id="difference-between-normal-binary-tree-and-binary-search-tree"><a href="#difference-between-normal-binary-tree-and-binary-search-tree" class="headerlink" title="difference between normal binary tree and binary search tree"></a>difference between normal binary tree and binary search tree</h4><p>A binary tree is a BST whenever the arrangement of node labels satisfies these two properties:</p>
+<ol>
+<li>For every node in the tree, if its label is x and if y is a label in that node’s left subtree, then y &lt; x</li>
+<li>For every node in the tree, if its label is x and if y is a label in that node’s right subtree, then y &gt; x</li>
+</ol>
+<p>Binary Tree:</p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925231059897.png" alt="image-20220925231059897"></p>
+<p>Binary Search Tree:</p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925231141223.png" alt="image-20220925231141223"></p>
+<h1 id="SortingMachine-have-to-look"><a href="#SortingMachine-have-to-look" class="headerlink" title="SortingMachine (have to look)"></a>SortingMachine (have to look)</h1><p>The SortingMachine component family allows you to add elements of type T to a collection of such elements, and then to remove them one at a time in sorted order according to a client-supplied ordering</p>
+<p><img src="https://raw.githubusercontent.com/Sma1lboy/CSE2231/main/Assists/imgs/image-20220925233937355.png" alt="image-20220925233937355"></p>
+<h4 id="Time-based-vs-Values-based"><a href="#Time-based-vs-Values-based" class="headerlink" title="Time based vs Values based"></a>Time based vs Values based</h4><p>FIFO and LIFO are time-based orderings</p>
+<p>osu.SortingMachine uses a value-based ordering.</p>
+<p>The mathematical model is an ordered triple (a.k.a. three-tuple): a boolean, a binary relation on T, and a finite multiset of T.</p>
+<p>***Recall: a binary relation on T may be viewed as a <strong>set of ordered pairs of T</strong>, or as a <strong>boolean-valued function R of two parameters of type T</strong> that is true iff that pair is in the set.</p>
+<p>A <strong>finite multiset</strong> is essentially a <strong>finite set</strong> with <strong>multiple copies</strong> of elements allowed, so there are effectively (nonnegative) “counts” of all values of the element type T; details as necessary</p>
+<h1 id="reference-link"><a href="#reference-link" class="headerlink" title="reference link"></a>reference link</h1>
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="../CSE2231%20Final%20Exam/">OLDER&nbsp;&gt;</a>
+      
+        
+            
+</div>
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/Sma1lboy">Page by Jackson</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="../../../../js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-box">
+        <div class="search-title">
+          <!-- <span class="search-icon-input">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </span> -->
+          
+            <input type="text" class="search-input" id="search-input" placeholder="search">
+          
+          <span class="search-close-icon" id="search-close-icon">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-close"></i>
+            </a>
+          </span>
+        </div>
+        <div class="search-result" id="search-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    // inputArea.onclick = function() {
+    //   getSearchFile()
+    //   this.onclick = null
+    // }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
+        getSearchFile()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
+      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                }
+                str += "<hr></li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>
