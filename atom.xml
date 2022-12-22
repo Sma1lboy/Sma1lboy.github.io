@@ -6,7 +6,7 @@
   <link href="http://sma1lboy.github.io/atom.xml" rel="self"/>
   
   <link href="http://sma1lboy.github.io/"/>
-  <updated>2022-12-21T18:40:44.909Z</updated>
+  <updated>2022-12-22T18:40:45.676Z</updated>
   <id>http://sma1lboy.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GO tour</title>
+    <link href="http://sma1lboy.github.io/2022/12/21/GO/"/>
+    <id>http://sma1lboy.github.io/2022/12/21/GO/</id>
+    <published>2022-12-21T22:12:33.000Z</published>
+    <updated>2022-12-22T18:40:45.676Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Basic&quot;&gt;&lt;a href=&quot;#Basic&quot; class=&quot;headerlink&quot; title=&quot;Basic&quot;&gt;&lt;/a&gt;Basic&lt;/h1&gt;&lt;h2 id=&quot;Imports&quot;&gt;&lt;a href=&quot;#Imports&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="tour note Go" scheme="http://sma1lboy.github.io/tags/tour-note-Go/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Algorithm&amp;Data Structure Review</title>
     <link href="http://sma1lboy.github.io/2022/12/20/Algorithm&amp;Data%20Structure%20Review/"/>
     <id>http://sma1lboy.github.io/2022/12/20/Algorithm&amp;Data%20Structure%20Review/</id>
     <published>2022-12-20T18:57:21.000Z</published>
-    <updated>2022-12-21T18:40:44.909Z</updated>
+    <updated>2022-12-21T21:54:17.834Z</updated>
     
     
       
@@ -109,6 +132,29 @@
   </entry>
   
   <entry>
+    <title>Git distributed version control system</title>
+    <link href="http://sma1lboy.github.io/2022/12/18/git/"/>
+    <id>http://sma1lboy.github.io/2022/12/18/git/</id>
+    <published>2022-12-18T22:57:34.000Z</published>
+    <updated>2022-12-20T00:27:44.223Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;分布式版本控制&quot;&gt;&lt;a href=&quot;#分布式版本控制&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="note" scheme="http://sma1lboy.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SDD Introduction</title>
     <link href="http://sma1lboy.github.io/2022/12/18/SDD%20Introduction/"/>
     <id>http://sma1lboy.github.io/2022/12/18/SDD%20Introduction/</id>
@@ -124,29 +170,6 @@
 &lt;ul&gt;
 &lt;li&gt;A description of the product.&lt;/li&gt;
 &lt;li&gt;The scope of the work required for the</summary>
-        
-      
-    
-    
-    
-    
-    <category term="note" scheme="http://sma1lboy.github.io/tags/note/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git distributed version control system</title>
-    <link href="http://sma1lboy.github.io/2022/12/18/git/"/>
-    <id>http://sma1lboy.github.io/2022/12/18/git/</id>
-    <published>2022-12-18T22:57:34.000Z</published>
-    <updated>2022-12-20T00:27:44.223Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;分布式版本控制&quot;&gt;&lt;a href=&quot;#分布式版本控制&quot; class=&quot;headerlink&quot;</summary>
         
       
     
