@@ -6,7 +6,7 @@
   <link href="http://sma1lboy.github.io/atom.xml" rel="self"/>
   
   <link href="http://sma1lboy.github.io/"/>
-  <updated>2022-12-22T18:40:45.676Z</updated>
+  <updated>2022-12-23T18:36:59.227Z</updated>
   <id>http://sma1lboy.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://sma1lboy.github.io/2022/12/21/GO/"/>
     <id>http://sma1lboy.github.io/2022/12/21/GO/</id>
     <published>2022-12-21T22:12:33.000Z</published>
-    <updated>2022-12-22T18:40:45.676Z</updated>
+    <updated>2022-12-23T18:36:59.227Z</updated>
     
     
       
@@ -63,32 +63,9 @@
   </entry>
   
   <entry>
-    <title>CSE 2231 Midterm 1 review</title>
-    <link href="http://sma1lboy.github.io/2022/12/19/CSE%202231%20midterm%201%20review/"/>
-    <id>http://sma1lboy.github.io/2022/12/19/CSE%202231%20midterm%201%20review/</id>
-    <published>2022-12-19T05:28:21.000Z</published>
-    <updated>2022-12-20T00:26:58.837Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Mathematic-models&quot;&gt;&lt;a href=&quot;#Mathematic-models&quot; class=&quot;headerlink&quot; title=&quot;Mathematic models&quot;&gt;&lt;/a&gt;Mathematic models&lt;/h1&gt;&lt;p&gt;Each</summary>
-        
-      
-    
-    
-    
-    
-    <category term="CSE2231" scheme="http://sma1lboy.github.io/tags/CSE2231/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSE 2231 final review</title>
-    <link href="http://sma1lboy.github.io/2022/12/19/CSE2231%20Final%20Exam/"/>
-    <id>http://sma1lboy.github.io/2022/12/19/CSE2231%20Final%20Exam/</id>
+    <link href="http://sma1lboy.github.io/2022/12/18/CSE2231%20Final%20Exam/"/>
+    <id>http://sma1lboy.github.io/2022/12/18/CSE2231%20Final%20Exam/</id>
     <published>2022-12-19T05:28:21.000Z</published>
     <updated>2022-12-20T01:02:50.362Z</updated>
     
@@ -109,9 +86,32 @@
   </entry>
   
   <entry>
+    <title>CSE 2231 Midterm 1 review</title>
+    <link href="http://sma1lboy.github.io/2022/12/18/CSE%202231%20midterm%201%20review/"/>
+    <id>http://sma1lboy.github.io/2022/12/18/CSE%202231%20midterm%201%20review/</id>
+    <published>2022-12-19T05:28:21.000Z</published>
+    <updated>2022-12-20T00:26:58.837Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Mathematic-models&quot;&gt;&lt;a href=&quot;#Mathematic-models&quot; class=&quot;headerlink&quot; title=&quot;Mathematic models&quot;&gt;&lt;/a&gt;Mathematic models&lt;/h1&gt;&lt;p&gt;Each</summary>
+        
+      
+    
+    
+    
+    
+    <category term="CSE2231" scheme="http://sma1lboy.github.io/tags/CSE2231/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSE 2231 Midterm 2 review</title>
-    <link href="http://sma1lboy.github.io/2022/12/19/CSE2231%20Midterm%202%20review/"/>
-    <id>http://sma1lboy.github.io/2022/12/19/CSE2231%20Midterm%202%20review/</id>
+    <link href="http://sma1lboy.github.io/2022/12/18/CSE2231%20Midterm%202%20review/"/>
+    <id>http://sma1lboy.github.io/2022/12/18/CSE2231%20Midterm%202%20review/</id>
     <published>2022-12-19T05:28:21.000Z</published>
     <updated>2022-12-20T00:32:29.132Z</updated>
     
@@ -182,8 +182,8 @@
   
   <entry>
     <title>first-post</title>
-    <link href="http://sma1lboy.github.io/2022/12/17/first-post/"/>
-    <id>http://sma1lboy.github.io/2022/12/17/first-post/</id>
+    <link href="http://sma1lboy.github.io/2022/12/16/first-post/"/>
+    <id>http://sma1lboy.github.io/2022/12/16/first-post/</id>
     <published>2022-12-17T05:28:21.000Z</published>
     <updated>2022-12-19T23:50:18.973Z</updated>
     
