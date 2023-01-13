@@ -6,7 +6,7 @@
   <link href="http://sma1lboy.github.io/atom.xml" rel="self"/>
   
   <link href="http://sma1lboy.github.io/"/>
-  <updated>2022-12-25T20:53:42.951Z</updated>
+  <updated>2023-01-13T15:11:56.062Z</updated>
   <id>http://sma1lboy.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://sma1lboy.github.io/2023/01/13/2023.01.13%20PHILOS%201332/"/>
+    <id>http://sma1lboy.github.io/2023/01/13/2023.01.13%20PHILOS%201332/</id>
+    <published>2023-01-13T14:45:42.016Z</published>
+    <updated>2023-01-13T15:11:56.062Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Deductive Arguments&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Premises&lt;ul&gt;
+&lt;li&gt;Steps (Modus ponens)&lt;ul&gt;
+&lt;li&gt;p1: A&lt;/li&gt;
+&lt;li&gt;p2: &lt;strong&gt;if A then</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>GO tour</title>
     <link href="http://sma1lboy.github.io/2022/12/21/GO/"/>
     <id>http://sma1lboy.github.io/2022/12/21/GO/</id>
     <published>2022-12-21T22:12:33.000Z</published>
-    <updated>2022-12-25T20:53:42.951Z</updated>
+    <updated>2023-01-08T22:24:50.829Z</updated>
     
     
       
@@ -44,7 +70,7 @@
     <link href="http://sma1lboy.github.io/2022/12/20/Algorithm&amp;Data%20Structure%20Review/"/>
     <id>http://sma1lboy.github.io/2022/12/20/Algorithm&amp;Data%20Structure%20Review/</id>
     <published>2022-12-20T18:57:21.000Z</published>
-    <updated>2022-12-21T21:54:17.834Z</updated>
+    <updated>2023-01-13T15:20:19.637Z</updated>
     
     
       
@@ -86,29 +112,6 @@
   </entry>
   
   <entry>
-    <title>CSE 2231 Midterm 2 review</title>
-    <link href="http://sma1lboy.github.io/2022/12/19/CSE2231%20Midterm%202%20review/"/>
-    <id>http://sma1lboy.github.io/2022/12/19/CSE2231%20Midterm%202%20review/</id>
-    <published>2022-12-19T05:28:21.000Z</published>
-    <updated>2022-12-20T00:32:29.132Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;CSE2231-Midterm-2&quot;&gt;&lt;a href=&quot;#CSE2231-Midterm-2&quot; class=&quot;headerlink&quot; title=&quot;CSE2231 Midterm 2&quot;&gt;&lt;/a&gt;CSE2231 Midterm</summary>
-        
-      
-    
-    
-    
-    
-    <category term="CSE2231" scheme="http://sma1lboy.github.io/tags/CSE2231/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSE 2231 final review</title>
     <link href="http://sma1lboy.github.io/2022/12/19/CSE2231%20Final%20Exam/"/>
     <id>http://sma1lboy.github.io/2022/12/19/CSE2231%20Final%20Exam/</id>
@@ -121,6 +124,29 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Final-Review&quot;&gt;&lt;a href=&quot;#Final-Review&quot; class=&quot;headerlink&quot; title=&quot;Final Review&quot;&gt;&lt;/a&gt;Final Review&lt;/h1&gt;&lt;h2 id=&quot;Java-Interface&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="CSE2231" scheme="http://sma1lboy.github.io/tags/CSE2231/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSE 2231 Midterm 2 review</title>
+    <link href="http://sma1lboy.github.io/2022/12/19/CSE2231%20Midterm%202%20review/"/>
+    <id>http://sma1lboy.github.io/2022/12/19/CSE2231%20Midterm%202%20review/</id>
+    <published>2022-12-19T05:28:21.000Z</published>
+    <updated>2022-12-20T00:32:29.132Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CSE2231-Midterm-2&quot;&gt;&lt;a href=&quot;#CSE2231-Midterm-2&quot; class=&quot;headerlink&quot; title=&quot;CSE2231 Midterm 2&quot;&gt;&lt;/a&gt;CSE2231 Midterm</summary>
         
       
     
