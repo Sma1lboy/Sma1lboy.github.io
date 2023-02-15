@@ -11,7 +11,7 @@
   
   <title>
     
-      SDD Introduction 
+      archive_a: 2023/2 
       
       
     
@@ -33,10 +33,6 @@
 
 
   
-
-  
-    
-<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -91,77 +87,141 @@
 
 
       <div class="main">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
-</script>
+<!-- last: 按年份把文章分组，当前遍历到的年份 -->
+<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="post">
-  <h3 class="date">
-    Dec 18, 2022
-  </h3>
-  <h1>
-    SDD Introduction
-  </h1>
-  <div class="content markdown-body">
-    <p>Software design documents should include:</p>
-<ul>
-<li>A description of the product.</li>
-<li>The scope of the work required for the project to be completed.</li>
-<li>And a list of milestones.</li>
-</ul>
-<h3 id="A-User-Interface"><a href="#A-User-Interface" class="headerlink" title="A. User Interface"></a>A. User Interface</h3><p>The user interface component of a project is by far the most challenging section of the design document.</p>
-<p>Even if the product owner sends clear illustrations created by a graphic designer, the graphic designer almost always is not also a strong programmer. Naturally, this will lead to communication issues.</p>
-<p>So yes, do create those illustrations, but keep in mind that you’ll need to provide some additional context, which I’ll get to in a moment. The problem here is that the illustrations likely say little regarding…</p>
-<ul>
-<li>Animations</li>
-<li>Control states.</li>
-<li>What happens with a button when it needs to be unusable?</li>
-<li>How do you know if the button should be visible to the end user or not?</li>
-<li>Or how do you ideally want the end-user to navigate the application?</li>
-</ul>
-<p>And this is a key example of how software design documents, like <a target="_blank" rel="noopener" href="https://blog.tara.ai/how-to-write-software-test-cases-template/">software test cases</a>, are a valuable time saver. Prior to a developer writing any code behind the illustrations, you need to have all such questions answered.</p>
-<p>But first, you need to create those illustrations…</p>
-<h3 id="Wireframing-Tools"><a href="#Wireframing-Tools" class="headerlink" title="Wireframing Tools"></a>Wireframing Tools</h3><p>You might be asking, “Okay, but what if I don’t have a graphic designer?”</p>
-<p>Not to worry…</p>
-<p>You can create some clean illustrations using one of many different <a target="_blank" rel="noopener" href="https://www.creativebloq.com/wireframes/top-wireframing-tools-11121302">wireframing tools</a>, and put together a complete set of screen layouts. This should include any variations that the views display in different application states. Just for the record, our favorite wireframing tool is <a target="_blank" rel="noopener" href="https://www.invisionapp.com/">Invision</a>. They’re awesome </p>
-<p>And if you’re working on a dual application that needs to be compatible across different devices and screen sizes, be sure to create separate wireframes for each device.</p>
-<p>Yes, this is a pain in the _______. </p>
-<p>But weigh the cost of having to rewrite hours worth of code and constantly changing the UI, with how long it’ll take one of you to create these screen layouts.</p>
-<p>So, to avoid miscommunication that could turn a three week project into a three month project…</p>
-<p><strong>Take the time in the beginning stages to get the UI design right!</strong></p>
-<p>Don’t presume anything, and ask each other lots of questions.</p>
-<h2 id="B-Requirements-x2F-System-Overview"><a href="#B-Requirements-x2F-System-Overview" class="headerlink" title="B. Requirements &#x2F; System Overview"></a>B. Requirements &#x2F; System Overview</h2><p>In the requirements section of your application design document, you’ll provide a general description of the functionality, context and design of the project.</p>
-<p>To help your developer(s) better understand your application, you’ll answer questions such as:</p>
-<ul>
-<li>“What’s the main purpose of the application?” And,</li>
-<li>“What are the possible failure scenarios and conditions?”</li>
-</ul>
-<p>The point here is for the product owner to answer these open ended questions as well as they can, and then for the developer to ask follow up questions once they receive the answers. As a result, you will dramatically reduce the risk of miscommunication and the need to write additional code.</p>
-<h2 id="C-Milestones"><a href="#C-Milestones" class="headerlink" title="C. Milestones"></a>C. Milestones</h2><p>Setting clear milestones for your design document template is key to fully understanding the <a target="_blank" rel="noopener" href="https://blog.tara.ai/project-scope/">scope of your project</a>.</p>
-<p>Whether it’s the developer or the product owner that sets these milestones, they should be as unambiguous as possible, and agreed upon one-by-one by both parties.</p>
-<p>Milestones can be in the form of functionalities and &#x2F; or components, or possibly in the form of independent applications should the job description include a full suite of deliverables. At a minimum, milestones should provide a clear metric toward completion.</p>
-
-  </div>
-  
+<div class="container archives">
+  <div class="post-list">
     
-      <a id="older" class="blog-nav" href="/2022/12/18/git/">OLDER&nbsp;&gt;</a>
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2023</span>
+          </h2>
+        </div>
       
-        
-          <a id="newer" class="blog-nav" href="/2022/12/19/CSE2231%20Final%20Exam/">&lt;&nbsp;NEWER</a>
-          
+      <div class="post-item" title="">
+        <div class="time-m-d">02-02</div>
+        <div class="title">
+          <a href="/2023/02/02/ISE%202040%20midterm%201%20review/">
             
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">01-13</div>
+        <div class="title">
+          <a href="/2023/01/13/2023.01.13%20PHILOS%201332/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2022</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="GO tour">
+        <div class="time-m-d">12-21</div>
+        <div class="title">
+          <a href="/2022/12/21/GO/">
+            
+              <span>GO tour</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Algorithm&Data Structure Review">
+        <div class="time-m-d">12-20</div>
+        <div class="title">
+          <a href="/2022/12/20/Algorithm&Data%20Structure%20Review/">
+            
+              <span>Algorithm&Data Structure Review</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="CSE 2231 Midterm 1 review">
+        <div class="time-m-d">12-19</div>
+        <div class="title">
+          <a href="/2022/12/19/CSE%202231%20midterm%201%20review/">
+            
+              <span>CSE 2231 Midterm 1 review</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="CSE 2231 Midterm 2 review">
+        <div class="time-m-d">12-19</div>
+        <div class="title">
+          <a href="/2022/12/19/CSE2231%20Midterm%202%20review/">
+            
+              <span>CSE 2231 Midterm 2 review</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="CSE 2231 final review">
+        <div class="time-m-d">12-19</div>
+        <div class="title">
+          <a href="/2022/12/19/CSE2231%20Final%20Exam/">
+            
+              <span>CSE 2231 final review</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="SDD Introduction">
+        <div class="time-m-d">12-18</div>
+        <div class="title">
+          <a href="/2022/12/18/SDD%20Introduction/">
+            
+              <span>SDD Introduction</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Git distributed version control system">
+        <div class="time-m-d">12-18</div>
+        <div class="title">
+          <a href="/2022/12/18/git/">
+            
+              <span>Git distributed version control system</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="first-post">
+        <div class="time-m-d">12-17</div>
+        <div class="title">
+          <a href="/2022/12/17/first-post/">
+            
+              <span>first-post</span>
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
 </div>
+
         <div class="footer">
   
     <div class="footer-more">

@@ -6,7 +6,7 @@
   <link href="http://sma1lboy.github.io/atom.xml" rel="self"/>
   
   <link href="http://sma1lboy.github.io/"/>
-  <updated>2023-01-13T15:11:56.062Z</updated>
+  <updated>2023-02-03T01:23:26.198Z</updated>
   <id>http://sma1lboy.github.io/</id>
   
   <author>
@@ -18,10 +18,31 @@
   
   <entry>
     <title></title>
+    <link href="http://sma1lboy.github.io/2023/02/02/ISE%202040%20midterm%201%20review/"/>
+    <id>http://sma1lboy.github.io/2023/02/02/ISE%202040%20midterm%201%20review/</id>
+    <published>2023-02-03T00:48:57.345Z</published>
+    <updated>2023-02-03T01:23:26.198Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Formula&quot;&gt;&lt;a href=&quot;#Formula&quot; class=&quot;headerlink&quot; title=&quot;Formula&quot;&gt;&lt;/a&gt;Formula&lt;/h1&gt;&lt;p&gt;Total assets &amp;#x3D; Liabilities +</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
     <link href="http://sma1lboy.github.io/2023/01/13/2023.01.13%20PHILOS%201332/"/>
     <id>http://sma1lboy.github.io/2023/01/13/2023.01.13%20PHILOS%201332/</id>
     <published>2023-01-13T14:45:42.016Z</published>
-    <updated>2023-01-13T15:11:56.062Z</updated>
+    <updated>2023-01-13T15:38:38.430Z</updated>
     
     
       
@@ -47,7 +68,7 @@
     <link href="http://sma1lboy.github.io/2022/12/21/GO/"/>
     <id>http://sma1lboy.github.io/2022/12/21/GO/</id>
     <published>2022-12-21T22:12:33.000Z</published>
-    <updated>2023-01-08T22:24:50.829Z</updated>
+    <updated>2023-01-31T04:02:23.131Z</updated>
     
     
       
@@ -112,29 +133,6 @@
   </entry>
   
   <entry>
-    <title>CSE 2231 final review</title>
-    <link href="http://sma1lboy.github.io/2022/12/19/CSE2231%20Final%20Exam/"/>
-    <id>http://sma1lboy.github.io/2022/12/19/CSE2231%20Final%20Exam/</id>
-    <published>2022-12-19T05:28:21.000Z</published>
-    <updated>2022-12-20T01:02:50.362Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Final-Review&quot;&gt;&lt;a href=&quot;#Final-Review&quot; class=&quot;headerlink&quot; title=&quot;Final Review&quot;&gt;&lt;/a&gt;Final Review&lt;/h1&gt;&lt;h2 id=&quot;Java-Interface&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="CSE2231" scheme="http://sma1lboy.github.io/tags/CSE2231/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSE 2231 Midterm 2 review</title>
     <link href="http://sma1lboy.github.io/2022/12/19/CSE2231%20Midterm%202%20review/"/>
     <id>http://sma1lboy.github.io/2022/12/19/CSE2231%20Midterm%202%20review/</id>
@@ -158,25 +156,25 @@
   </entry>
   
   <entry>
-    <title>Git distributed version control system</title>
-    <link href="http://sma1lboy.github.io/2022/12/18/git/"/>
-    <id>http://sma1lboy.github.io/2022/12/18/git/</id>
-    <published>2022-12-18T22:57:34.000Z</published>
-    <updated>2022-12-20T00:27:44.223Z</updated>
+    <title>CSE 2231 final review</title>
+    <link href="http://sma1lboy.github.io/2022/12/19/CSE2231%20Final%20Exam/"/>
+    <id>http://sma1lboy.github.io/2022/12/19/CSE2231%20Final%20Exam/</id>
+    <published>2022-12-19T05:28:21.000Z</published>
+    <updated>2022-12-20T01:02:50.362Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;分布式版本控制&quot;&gt;&lt;a href=&quot;#分布式版本控制&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;Final-Review&quot;&gt;&lt;a href=&quot;#Final-Review&quot; class=&quot;headerlink&quot; title=&quot;Final Review&quot;&gt;&lt;/a&gt;Final Review&lt;/h1&gt;&lt;h2 id=&quot;Java-Interface&quot;&gt;&lt;a</summary>
         
       
     
     
     
     
-    <category term="note" scheme="http://sma1lboy.github.io/tags/note/"/>
+    <category term="CSE2231" scheme="http://sma1lboy.github.io/tags/CSE2231/"/>
     
   </entry>
   
@@ -196,6 +194,29 @@
 &lt;ul&gt;
 &lt;li&gt;A description of the product.&lt;/li&gt;
 &lt;li&gt;The scope of the work required for the</summary>
+        
+      
+    
+    
+    
+    
+    <category term="note" scheme="http://sma1lboy.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git distributed version control system</title>
+    <link href="http://sma1lboy.github.io/2022/12/18/git/"/>
+    <id>http://sma1lboy.github.io/2022/12/18/git/</id>
+    <published>2022-12-18T22:57:34.000Z</published>
+    <updated>2022-12-20T00:27:44.223Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;分布式版本控制&quot;&gt;&lt;a href=&quot;#分布式版本控制&quot; class=&quot;headerlink&quot;</summary>
         
       
     
